@@ -1,1 +1,1 @@
-# adyen-apple-pay-provisioning-ios
+# Adyen Apple Pay Provisionin iOS
