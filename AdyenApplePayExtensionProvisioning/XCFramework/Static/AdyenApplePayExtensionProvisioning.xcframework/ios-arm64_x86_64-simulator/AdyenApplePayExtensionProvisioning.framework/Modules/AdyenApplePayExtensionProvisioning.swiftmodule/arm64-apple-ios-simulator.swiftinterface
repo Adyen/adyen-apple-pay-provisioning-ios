@@ -1,0 +1,53 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name AdyenApplePayExtensionProvisioning
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import AdyenApplePayExtensionProvisioning
+import Foundation
+import PassKit
+import Swift
+import UIKit
+import WatchConnectivity
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol ExtensionProvisioningServiceDelegate : AnyObject {
+  func cardArt(forBrand: Swift.String) -> CoreGraphics.CGImage
+  #if compiler(>=5.3) && $AsyncAwait
+  func provision(paymentInstrumentId: Swift.String, sdkOutput: Foundation.Data) async -> Foundation.Data?
+  #endif
+}
+public enum ExtensionProvisioningServiceError : Foundation.LocalizedError {
+  case invalidSDKInput
+  case emptySDKInputs
+  case unableToConstructSDKOutput
+  case applePayNotSupported
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError, b: AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ExtensionProvisioningService {
+  convenience public init(sdkInput: Foundation.Data) throws
+  convenience public init(sdkInputs: [Foundation.Data]) throws
+  @available(iOS 14, *)
+  public func extensionStatus(requiresAuthentication: Swift.Bool) -> PassKit.PKIssuerProvisioningExtensionStatus
+  @available(iOS 14, *)
+  public static var entriesUnavailableExtensionStatus: PassKit.PKIssuerProvisioningExtensionStatus {
+    get
+  }
+  @available(iOS 14, *)
+  public func passEntries(withDelegate delegate: any AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceDelegate) -> [PassKit.PKIssuerProvisioningExtensionPassEntry]
+  @available(iOS 14, *)
+  public func remotePassEntries(withDelegate delegate: any AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceDelegate) -> [PassKit.PKIssuerProvisioningExtensionPassEntry]
+  #if compiler(>=5.3) && $AsyncAwait
+  public func generateAddPaymentPassRequestForPassEntryWithIdentifier(_ identifier: Swift.String, configuration: PassKit.PKAddPaymentPassRequestConfiguration, certificateChain certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data, delegate: any AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceDelegate) async throws -> PassKit.PKAddPaymentPassRequest
+  #endif
+  @objc deinit
+}
+extension AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError : Swift.Equatable {}
+extension AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError : Swift.Hashable {}
