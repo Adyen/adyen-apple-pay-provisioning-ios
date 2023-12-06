@@ -1,0 +1,1315 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "Import",
+        "name": "WatchConnectivity",
+        "printedName": "WatchConnectivity",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProvisioningServiceDelegate",
+        "printedName": "ProvisioningServiceDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "provision",
+            "printedName": "provision(sdkOutput:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D15ServiceDelegateP9provision9sdkOutput10Foundation4DataVSgAH_tYaF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D15ServiceDelegateP9provision9sdkOutput10Foundation4DataVSgAH_tYaF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "genericSig": "<τ_0_0 where τ_0_0 : AdyenApplePayProvisioning.ProvisioningServiceDelegate>",
+            "sugared_genericSig": "<Self where Self : AdyenApplePayProvisioning.ProvisioningServiceDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didFinishProvisioning",
+            "printedName": "didFinishProvisioning(with:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PassKit.PKPaymentPass?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PKPaymentPass",
+                    "printedName": "PassKit.PKPaymentPass",
+                    "usr": "c:objc(cs)PKPaymentPass"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D15ServiceDelegateP09didFinishD04with5errorySo13PKPaymentPassCSg_s5Error_pSgtF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D15ServiceDelegateP09didFinishD04with5errorySo13PKPaymentPassCSg_s5Error_pSgtF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "genericSig": "<τ_0_0 where τ_0_0 : AdyenApplePayProvisioning.ProvisioningServiceDelegate>",
+            "sugared_genericSig": "<Self where Self : AdyenApplePayProvisioning.ProvisioningServiceDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25AdyenApplePayProvisioning0D15ServiceDelegateP",
+        "mangledName": "$s25AdyenApplePayProvisioning0D15ServiceDelegateP",
+        "moduleName": "AdyenApplePayProvisioning",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProvisioningServiceError",
+        "printedName": "ProvisioningServiceError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalidSDKInput",
+            "printedName": "invalidSDKInput",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO15invalidSDKInputyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO15invalidSDKInputyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "applePayNotSupported",
+            "printedName": "applePayNotSupported",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO05appleC12NotSupportedyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO05appleC12NotSupportedyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "passKitError",
+            "printedName": "passKitError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> (Swift.Error) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO07passKitF0yACs0F0_pcACmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO07passKitF0yACs0F0_pcACmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "presentationFailure",
+            "printedName": "presentationFailure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO19presentationFailureyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO19presentationFailureyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "userCancelled",
+            "printedName": "userCancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO13userCancelledyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO13userCancelledyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "delegateNotSet",
+            "printedName": "delegateNotSet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO14delegateNotSetyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO14delegateNotSetyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToConstructSDKOutput",
+            "printedName": "unableToConstructSDKOutput",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AdyenApplePayProvisioning.ProvisioningServiceError.Type) -> AdyenApplePayProvisioning.ProvisioningServiceError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProvisioningServiceError",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                    "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProvisioningServiceError",
+                        "printedName": "AdyenApplePayProvisioning.ProvisioningServiceError",
+                        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO26unableToConstructSDKOutputyA2CmF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO26unableToConstructSDKOutputyA2CmF",
+            "moduleName": "AdyenApplePayProvisioning"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO16errorDescriptionSSSgvp",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO16errorDescriptionSSSgvg",
+                "moduleName": "AdyenApplePayProvisioning",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:25AdyenApplePayProvisioning0D12ServiceErrorO",
+        "mangledName": "$s25AdyenApplePayProvisioning0D12ServiceErrorO",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CanAddCardDetails",
+        "printedName": "CanAddCardDetails",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "canAddCard",
+            "printedName": "canAddCard",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canfG0Sbvp",
+            "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canfG0Sbvp",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canfG0Sbvg",
+                "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canfG0Sbvg",
+                "moduleName": "AdyenApplePayProvisioning",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "watchAvailable",
+            "printedName": "watchAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV14watchAvailableSbvp",
+            "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV14watchAvailableSbvp",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV14watchAvailableSbvg",
+                "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV14watchAvailableSbvg",
+                "moduleName": "AdyenApplePayProvisioning",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "canAddToPhone",
+            "printedName": "canAddToPhone",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToPhoneSbvp",
+            "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToPhoneSbvp",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToPhoneSbvg",
+                "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToPhoneSbvg",
+                "moduleName": "AdyenApplePayProvisioning",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "canAddToWatch",
+            "printedName": "canAddToWatch",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToWatchSbvp",
+            "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToWatchSbvp",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToWatchSbvg",
+                "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV03canF7ToWatchSbvg",
+                "moduleName": "AdyenApplePayProvisioning",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV",
+        "mangledName": "$s25AdyenApplePayProvisioning17CanAddCardDetailsV",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProvisioningService",
+        "printedName": "ProvisioningService",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sdkInput:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProvisioningService",
+                "printedName": "AdyenApplePayProvisioning.ProvisioningService",
+                "usr": "s:25AdyenApplePayProvisioning0D7ServiceC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC8sdkInputAC10Foundation4DataV_tKcfc",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC8sdkInputAC10Foundation4DataV_tKcfc",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "canAddCard",
+            "printedName": "canAddCard()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC10canAddCardSbyYaF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC10canAddCardSbyYaF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "passURL",
+            "printedName": "passURL()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC7passURL10Foundation0G0VSgyF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC7passURL10Foundation0G0VSgyF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canAddCardDetails",
+            "printedName": "canAddCardDetails()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CanAddCardDetails",
+                "printedName": "AdyenApplePayProvisioning.CanAddCardDetails",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetailsAA03CanghI0VyYaF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetailsAA03CanghI0VyYaF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(delegate:presentingViewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProvisioningServiceDelegate",
+                "printedName": "AdyenApplePayProvisioning.ProvisioningServiceDelegate",
+                "usr": "s:25AdyenApplePayProvisioning0D15ServiceDelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC5start8delegate24presentingViewControlleryAA0dE8Delegate_p_So06UIViewJ0CtKF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC5start8delegate24presentingViewControlleryAA0dE8Delegate_p_So06UIViewJ0CtKF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPaymentPassViewController",
+            "printedName": "addPaymentPassViewController(_:generateRequestWithCertificateChain:nonce:nonceSignature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PassKit.PKAddPaymentPassRequest?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PKAddPaymentPassRequest",
+                    "printedName": "PassKit.PKAddPaymentPassRequest",
+                    "usr": "c:objc(cs)PKAddPaymentPassRequest"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.Data]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC28addPaymentPassViewController_35generateRequestWithCertificateChain5nonce0P9SignatureSo05PKAddghL0CSgSo06UIViewJ0C_Say10Foundation4DataVGA2OtYaF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC28addPaymentPassViewController_35generateRequestWithCertificateChain5nonce0P9SignatureSo05PKAddghL0CSgSo06UIViewJ0C_Say10Foundation4DataVGA2OtYaF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPaymentPassViewController",
+            "printedName": "addPaymentPassViewController(_:didFinishAdding:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PassKit.PKPaymentPass?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PKPaymentPass",
+                    "printedName": "PassKit.PKPaymentPass",
+                    "usr": "c:objc(cs)PKPaymentPass"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC28addPaymentPassViewController_15didFinishAdding5errorySo06UIViewJ0C_So09PKPaymentH0CSgs5Error_pSgtF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC28addPaymentPassViewController_15didFinishAdding5errorySo06UIViewJ0C_So09PKPaymentH0CSgs5Error_pSgtF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:25AdyenApplePayProvisioning0D7ServiceC",
+        "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WatchConnectivity",
+        "printedName": "WatchConnectivity",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AdyenApplePayProvisioning"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PKPassLibrary",
+        "printedName": "PKPassLibrary",
+        "declKind": "Class",
+        "usr": "c:objc(cs)PKPassLibrary",
+        "moduleName": "PassKit",
+        "isOpen": true,
+        "intro_iOS": "6.0",
+        "objc_name": "PKPassLibrary",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PKSecureElementPass",
+        "printedName": "PKSecureElementPass",
+        "declKind": "Class",
+        "usr": "c:objc(cs)PKSecureElementPass",
+        "moduleName": "PassKit",
+        "isOpen": true,
+        "intro_iOS": "13.4",
+        "objc_name": "PKSecureElementPass",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)PKPass",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "PassKit.PKPass",
+          "PassKit.PKObject",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 1872,
+      "length": 44,
+      "value": "\"The provided sdkInput could not be parsed.\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 1972,
+      "length": 54,
+      "value": "\"Apple Pay is not supported by the Payment Instrument\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2085,
+      "length": 75,
+      "value": "\"PassKit threw an error while adding a card: \""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2159,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2215,
+      "length": 105,
+      "value": "\"The PassKit view controller could not be presented. Check if the app includes the correct entitlements.\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2369,
+      "length": 50,
+      "value": "\"The provisioning flow was cancelled by the user.\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2469,
+      "length": 51,
+      "value": "\"There is no delegate to handle the provision call\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "StringLiteral",
+      "offset": 2582,
+      "length": 55,
+      "value": "\"sdkOutput could not be encoded for the provision call\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5934,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/ProvisioningService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9134,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "kind": "StringLiteral",
+      "offset": 483,
+      "length": 10,
+      "value": "\"applePay\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 10,
+      "value": "\"applePay\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/PassLibrary.swift",
+      "kind": "BooleanLiteral",
+      "offset": 991,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/PassLibrary.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1954,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/RemoteLibraryAvailability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 676,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/RemoteLibraryAvailability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1657,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/sJ3Jspti\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/AddPassViewControlling.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1602,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}
