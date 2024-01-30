@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xurM1ObcDXju99/Ch7veE/qE588=
+		+etMwtPFRDsoRhBmi4rL7EncEVU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xurM1ObcDXju99/Ch7veE/qE588=
+			+etMwtPFRDsoRhBmi4rL7EncEVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5MQ/e9Q8KVI+tZ1owRxPsIcY0ddZXZM1WlxrOPZgE8M=
+			sMjvdGZkNFapcF4esjnaUXVhaUqreuFTsKjdS6SJdo4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
