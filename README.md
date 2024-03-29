@@ -21,6 +21,7 @@ Drag the dynamic `AdyenApplePayProvisioning/XCFramework/Dynamic/AdyenApplePayPro
 
 1. Drag the static `AdyenApplePayProvisioning/XCFramework/Static/AdyenApplePayProvisioning.xcframework` and `AdyenApplePayExtensionProvisioning/XCFramework/Static/AdyenApplePayExtensionProvisioning.xcframework` (wallet extension) to the `Frameworks, Libraries, and Embedded Content` section in your general target settings.
 2. Make sure the static `AdyenApplePayProvisioning.xcframework` and `AdyenApplePayExtensionProvisioning.xcframework` is not embedded.
+3. Select `AdyenApplePayProvisioning.bundle` inside `AdyenApplePayProvisioning.xcframework` (same for extension) and check "Copy items if needed", then select "Add".
 
 ## Usage
 
@@ -84,11 +85,8 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler, ExtensionProvi
 }
 ```
 
-For more documentation refer to our [complete documentation](https://docs.adyen.com/issuing/digital-wallets/apple-pay-provisioning/)
-
 ## See also
-
- * [Complete Documentation](https://docs.adyen.com/issuing/digital-wallets/apple-pay-provisioning/)
+ 
  * [SDK Reference Adyen Apple Pay Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning/)
  * [SDK Reference Adyen Apple Pay Extension Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning/)
  * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)

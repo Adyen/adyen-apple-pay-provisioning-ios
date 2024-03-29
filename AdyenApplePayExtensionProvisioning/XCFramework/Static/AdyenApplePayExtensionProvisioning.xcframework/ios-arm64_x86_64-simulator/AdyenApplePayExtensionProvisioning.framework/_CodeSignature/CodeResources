@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YeM4WgBSwaZXgqEUAmi+F72f4Yg=
+		pjcTAQwMYMPC4lhafPekpSaITwk=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		J07LEm37LyqlTWQGnHp8dPBGiLQ=
+		Ojz6L/Co32gkwdJ4nyliXBPfp/Q=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		OgzVhk+Z5fmXemF3xjD0rOvqBI4=
+		3Ozs+32WsK71DEE6sLgc5H7WuGs=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		J07LEm37LyqlTWQGnHp8dPBGiLQ=
+		Ojz6L/Co32gkwdJ4nyliXBPfp/Q=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NDfMw4yxnD/Rlym9ua0MfOKJGL4=
+		koziD3PKFlRZ9Su/DQ/funEpnh8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,11 +89,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J07LEm37LyqlTWQGnHp8dPBGiLQ=
+			Ojz6L/Co32gkwdJ4nyliXBPfp/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			XEJmqV5zYo/fTYDhBcXevxrzvEwFVo5Klri6Ga6+XC4=
+			aMLtogkz4SkKsvpRniRRyKmZ8Ge1caAPL8d4jdoP0mg=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,22 +133,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OgzVhk+Z5fmXemF3xjD0rOvqBI4=
+			3Ozs+32WsK71DEE6sLgc5H7WuGs=
 			</data>
 			<key>hash2</key>
 			<data>
-			hszJ6NX3BSQMwuKUVb9MLUwOXSkehB7pYzmhmx5TNgs=
+			XuOIIm5gvuyfqLYrOZ6nu5ANBaFk4y56LhuNjZbUa4Y=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J07LEm37LyqlTWQGnHp8dPBGiLQ=
+			Ojz6L/Co32gkwdJ4nyliXBPfp/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			XEJmqV5zYo/fTYDhBcXevxrzvEwFVo5Klri6Ga6+XC4=
+			aMLtogkz4SkKsvpRniRRyKmZ8Ge1caAPL8d4jdoP0mg=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -188,11 +188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NDfMw4yxnD/Rlym9ua0MfOKJGL4=
+			koziD3PKFlRZ9Su/DQ/funEpnh8=
 			</data>
 			<key>hash2</key>
 			<data>
-			qvD7GZaG4yRuRCIk9f1xfX/RnCLjxmpLBXF92DNFp74=
+			h0g6yC3bIXuy2tBrur9GVPmWI1emnyLR4zTXhGoImnA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YeM4WgBSwaZXgqEUAmi+F72f4Yg=
+		pjcTAQwMYMPC4lhafPekpSaITwk=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		2wrv8xQ24h+b47NDUBKsy1ZoxYI=
+		YGKY/0psF1VJ804AEDNM9M9qNDM=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IzmzjflX1iJA/Gf3fXKSGYefnok=
+		8RRif/gAAnvG7g3LI8bKrtwlp1o=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		2wrv8xQ24h+b47NDUBKsy1ZoxYI=
+		YGKY/0psF1VJ804AEDNM9M9qNDM=
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		osK/5zUfLQ3XYCWgX/hcTWtqBS4=
+		YOIniEgXiZu7nCCnkFGaYBQcrSE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BOCIDzAisYiP1G8+FXa++LrV/AnfpE/U52X6lY7sFnQ=
+			TvWpoJw6vvK5N2PaRdEH6/sGTlTxNXeYqt/Q36wkSiM=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VIbr5FsDPQSjmwgW6YpgdPUxTOx4hFmuAVFbDxZGtDE=
+			7LzdPgDFm6WKm090+uibCXuf8EOaAyNjehdiaHX/3ao=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BOCIDzAisYiP1G8+FXa++LrV/AnfpE/U52X6lY7sFnQ=
+			TvWpoJw6vvK5N2PaRdEH6/sGTlTxNXeYqt/Q36wkSiM=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+23bcPKT2tDTcQQToRiSHua4qgQbsRfbUhcyJK0Z0OY=
+			7ETEH+3nsySPjRDeRbhzQtlX7Hgo8bVI7rdiJxq66DA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
