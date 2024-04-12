@@ -86,9 +86,10 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler, ExtensionProvi
 ```
 
 ## See also
- 
- * [SDK Reference Adyen Apple Pay Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning/)
- * [SDK Reference Adyen Apple Pay Extension Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning/)
+
+ * [Full documentation](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/)
+ * [SDK reference Adyen Apple Pay Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning/)
+ * [SDK reference Adyen Apple Pay Extension Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/1.0.0/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning/)
  * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License
