@@ -33,3 +33,10 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./AdyenApplePayExtensionProvisioning/Documentation/html
         destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/AdyenApplePayExtensionProvisioning
+
+    - name: Deploy Full Documentation to current version
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./ApiDocumentation
+        destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/Api
