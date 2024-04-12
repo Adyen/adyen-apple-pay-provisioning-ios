@@ -60,8 +60,8 @@ let canAddCard = await provisioningService.canAddCard()
 
 Use the value returned by the `canAddCard` method to show or hide the **Add card to Apple Wallet** button.
 
-[!NOTE]
-If available, you can add a payment card to both iPhone and Apple Watch. To determine the compatibility of the card with a particular device, use the `canAddCardDetails()` function.
+> [!NOTE]
+> If available, you can add a payment card to both iPhone and Apple Watch. To determine the compatibility of the card with a particular device, use the `canAddCardDetails()` function.
 
 ### Initiate card provisioning
 
