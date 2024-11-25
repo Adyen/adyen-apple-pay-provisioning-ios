@@ -277,6 +277,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
+@import WatchConnectivity;
 #endif
 
 #endif
@@ -300,6 +302,27 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+
+@class WCSession;
+
+/// <code>WatchAvailability</code> class provides functionality to pair the device with an Apple Watch and check its availability.
+/// The state is retrieved from <code>WCSession.default</code>, which is a global state, be cautious if your app is already using <code>WCSession</code>
+/// as this class reassigns <code>WCSession.default.delegate</code> property.
+/// Do not create multiple instances of <code>WatchAvailability</code> in case you need to pass the pairing state to multiple <code>ProvisioningService</code> instances.
+/// Usage example:
+/// \code
+/// let isPaired = await WatchAvailability().pair()
+/// let canAddCard = provisioningService.canAddCard(isWatchPaired: isPaired)
+///
+/// \endcode
+SWIFT_CLASS("_TtC25AdyenApplePayProvisioning17WatchAvailability")
+@interface WatchAvailability : NSObject <WCSessionDelegate>
+- (nonnull instancetype)init;
+- (void)session:(WCSession * _Nonnull)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError * _Nullable)error;
+- (void)sessionDidBecomeInactive:(WCSession * _Nonnull)session;
+- (void)sessionDidDeactivate:(WCSession * _Nonnull)session;
+@end
 
 #endif
 #if __has_attribute(external_source_symbol)

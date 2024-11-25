@@ -16,7 +16,7 @@ Before you start implementing the Adyen SDK, make sure that your system follows 
 
 ## In-app provisioning
 
-With Apple Pay in-app provisioning, your cardholder can start add their card directly from your app. During the in-app flow, the cardholder taps **Add to Apple Wallet** and the provisioning process starts and finishes within your app providing a seamless flow.
+With Apple Pay in-app provisioning, your cardholder can add their card directly from your app. During the in-app flow, the cardholder taps **Add to Apple Wallet** and the provisioning process starts and finishes within your app providing a seamless flow.
 
 The following diagram walks you through the in-app provisioning flow. Green labels correspond to the steps described further on the page:
 
@@ -48,20 +48,24 @@ Before you start card provisioning, you must get activation data for the specifi
 
 ### Check for a card to add to Wallet
 
-Initialize the `ProvisioningService` class that is used to check if the cardholder can add a payment card to their Apple Wallet.
+Initialize the `ProvisioningService` class. Check if the cardholder can add a payment card to their Apple Wallet (phone or watch). If the card cannot be added it means it is already in the wallet. You can use `WatchAvailability` class to determine if the watch is paired.
 
 ```swift
 import AdyenApplePayProvisioning
 
+// Create only one instance of WatchAvailability
+let watchAvailability = WatchAvailability()
+
 let provisioningService = ProvisioningService(sdkInput: sdkInput)
-let canAddCard = await provisioningService.canAddCard()
-// Show or hide the Add card to Apple Wallet button
+let isWatchPaired = await watchAvailability.pair()
+let state = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
+
+if state.canAddCard {
+    // show "Add to Apple Wallet" button
+}
 ```
 
 Use the value returned by the `canAddCard` method to show or hide the **Add card to Apple Wallet** button.
-
-> [!NOTE]
-> If available, you can add a payment card to both iPhone and Apple Watch. To determine the compatibility of the card with a particular device, use the `canAddCardDetails()` function.
 
 ### Initiate card provisioning
 
@@ -77,17 +81,29 @@ try provisioningService.start(
 
 ### Provision the card
 
-Implement `ProvisioningServiceDelegate` to receive the `provision(sdkOutput)` callback from the Adyen SDK. In the callback:
+Implement `ProvisioningServiceDelegate` to receive the `provision(sdkOutput, paymentInstrumentId)` callback from the Adyen SDK. In the callback:
 
 1. From your back end, make a POST `paymentInstruments/{id}/networkTokenActivationData` request and pass `sdkOutput` to provision the payment instrument. The response contains the `sdkInput` object.
 2. Return `sdkInput` from the `provision` method.
 
-   ```swift
-   func provision(sdkOutput: Data) async -> Data? {
-       let sdkInput = // POST `sdkOutput` to server
-       return sdkInput
-   }
-   ```
+```swift
+func provision(sdkOutput: Data, paymentInstrumentId: String) async -> Data? {
+    struct ProvisioningBody: Encodable {
+        let sdkOutput: Data
+    }
+
+    let encoder = JSONEncoder()
+    encoder.dataEncodingStrategy = .base64
+
+    do {
+        let body = try encoder.encode(ProvisioningBody(sdkOutput: sdkOutput))
+        let sdkInput = // POST the body to the server and receive `sdkInput` back
+        return sdkInput
+    } catch {
+        return nil
+    }
+}
+```
 
 ### Finalize card provisioning
 
@@ -127,18 +143,18 @@ To add the Apple Wallet extension:
 
     |Key|Type|Value|
     |---|---|---|
-    | `NSExtension` | String | **com.apple.PassKit.issuer-provisioning** |
+    | `NSExtensionPointIdentifier` | String | **com.apple.PassKit.issuer-provisioning** |
     | `NSExtensionPrincipalClass` | String | **$(PRODUCT_MODULE_NAME).ExtensionHandler** |
 
 2. Create an `ExtensionHandler` class that implements the `PKIssuerProvisioningExtensionHandler` protocol. This class manages the issuer-provided extension that is used during the card provisioning process.
 
-    ```swift
-    import PassKit
+```swift
+import PassKit
 
-    class ExtensionHandler: PKIssuerProvisioningExtensionHandler {
+class ExtensionHandler: PKIssuerProvisioningExtensionHandler {
 
-    }
-    ```
+}
+```
 
 #### Add authentication extension
 
@@ -148,40 +164,40 @@ The Apple Wallet authenticates cardholders before allowing them to provision car
 
     |Key|Type|Value|
     |---|---|---|
-    | `NSExtension` | String | **com.apple.PassKit.issuer-provisioning.authorization** |
+    | `NSExtensionPointIdentifier` | String | **com.apple.PassKit.issuer-provisioning.authorization** |
     | `NSExtensionPrincipalClass` | String | **$(PRODUCT_MODULE_NAME).AuthorizationProvider** |
 
 2. Create an `AuthorizationProvider` class that is a subclass of `UIViewController` and implements the `PKIssuerProvisioningExtensionAuthorizationProviding` protocol. Use the `completionHandler` to communicate if the authentication was successful.
 
 ### Return extension status
 
-The Apple Wallet will call the extension while the user is interacting with the Wallet app. Because of this, the extension has strict limits on how much time certain steps can take to execute. The first method that is called on your extension, `status()`, needs to complete within 100 ms. Therefore, it is not possible to reliably to a network call to initialize the Adyen SDK.
+The Apple Wallet will call the extension while the user is interacting with the Wallet app. Because of this, the extension has strict limits on how much time certain steps can take to execute. The first method that is called on your extension, `status()`, needs to complete within 100 ms. Therefore, it is not possible to reliably make a network call to initialize the Adyen SDK, instead it's advisable to use cached activation data (e.g. stored in the keychain).
 
 1. In your main app, save the `sdkInput` after doing the network call. Retrieve this stored value in your extension. 
 
 2. Initialize the `ExtensionProvisioningService` class. This class manages the custom extension used during the provisioning process for adding new payment cards to the Apple Wallet.
 
-   ```swift
-   import AdyenApplePayExtensionProvisioning
+```swift
+import AdyenApplePayExtensionProvisioning
 
-   // For one payment instrument:
-   let provisioningService = ExtensionProvisioningService(sdkInput: sdkInput) 
+// For one payment instrument:
+let provisioningService = ExtensionProvisioningService(sdkInput: sdkInput) 
 
-   // For multiple payment instruments:
-   let provisioningService = ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
-   ```
+// For multiple payment instruments:
+let provisioningService = ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
+```
 
 3. To implement the `status()` method of the `PKIssuerProvisioningExtensionHandler` protocol, call `extensionStatus()` on the Adyen SDK. Use the `requiresAuthentication` parameter to indicate that you will provide [authentication through the UI extension](#add-authentication-extension). If the `ExtensionProvisioningService` could not be initialized, use `entriesUnavailableExtensionStatus` to indicate that no pass entries are available.
 
-   ```swift
-   func status() async -> PKIssuerProvisioningExtensionStatus {
-   // Initialize the service
-   return provisioningService.extensionStatus(requiresAuthentication: true)
+```swift
+func status() async -> PKIssuerProvisioningExtensionStatus {
+// Initialize the service
+return provisioningService.extensionStatus(requiresAuthentication: true)
 
-   // If service could not be initialized
-   return ExtensionProvisioningService.entriesUnavailableExtensionStatus
-   }
-   ```
+// If service could not be initialized
+return ExtensionProvisioningService.entriesUnavailableExtensionStatus
+}
+```
 
 ### Return pass entries
 
@@ -199,35 +215,35 @@ To return available passes, implement two methods: `passEntries()` and `remotePa
 
 2. Initialize the `ExtensionProvisioningService` class.
 
-    ```swift
-    import AdyenApplePayExtensionProvisioning
+```swift
+import AdyenApplePayExtensionProvisioning
 
-    // For one payment instrument:
-    let provisioningService = ExtensionProvisioningService(sdkInput: sdkInput) 
+// For one payment instrument:
+let provisioningService = ExtensionProvisioningService(sdkInput: sdkInput) 
 
-    // For multiple payment instruments:
-    let provisioningService = ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
-    ```
+// For multiple payment instruments:
+let provisioningService = ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
+```
 
-3. The Wallet app will show a preview of the card(s) to the user. To supply the SDK with the correct image of the card, implement `ExtensionProvisioningServiceDelegate` to receive the `cardArt(forBrand: String)` callback from the Adyen SDK. In this method, return the card art for the specified brand. Make sure the card art accurately represents the card that will be added to Apple Wallet.
+3. The Wallet app will show a preview of the card(s) to the user. To supply the SDK with the correct image of the card, implement `ExtensionProvisioningServiceDelegate` to receive the `cardArt(paymentInstrumentId: String)` callback from the Adyen SDK. In this method, return the card art for the specified paymentInstrumentId. Make sure the card art accurately represents the card that will be added to Apple Wallet.
 
-   ```swift
-   func cardArt(forBrand brand: String) -> CGImage {
-       // Return card art
-   }
-   ```
+```swift
+func cardArt(paymentInstrumentId: String) -> CGImage {
+   // Return card art
+}
+```
 
 4. Implement the methods `passEntries()` and `remotePassEntries()` by calling the corresponding methods of the SDK. Supply the delegate created in the previous step.
 
-   ```swift
-   func passEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
-     return provisioningService.passEntries(withDelegate: delegate)
-   }
+```swift
+func passEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
+ return provisioningService.passEntries(withDelegate: delegate)
+}
 
-   func remotePassEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
-     return provisioningService.remotePassEntries(withDelegate: delegate)
-   }
-   ```
+func remotePassEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
+ return provisioningService.remotePassEntries(withDelegate: delegate)
+}
+```
 
 ### Provision the card from the extension
 
@@ -237,12 +253,12 @@ To provision the card when the extension requests it:
 2. In the callback, make a POST `paymentInstruments/{id}/networkTokenActivationData` request and pass `sdkOutput` to provision the payment instrument.
 3. Return the `sdkInput` from the response back to Adyen SDK.
 
-   ```swift
-   func provision(paymentInstrumentId: String, sdkOutput: Data) async -> Data? {
-       let sdkInput = // POST `sdkOutput` to server
-       return sdkInput
-   }
-   ```
+```swift
+func provision(paymentInstrumentId: String, sdkOutput: Data) async -> Data? {
+   let sdkInput = // POST `sdkOutput` to server
+   return sdkInput
+}
+```
 
 ### Generate a request to add a payment pass
 

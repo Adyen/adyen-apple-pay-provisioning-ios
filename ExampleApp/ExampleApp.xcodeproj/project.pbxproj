@@ -17,8 +17,6 @@
 		866151472B597ADC00154C08 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866151462B597ADC00154C08 /* SignInView.swift */; };
 		866151492B5A7C2000154C08 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866151482B5A7C2000154C08 /* AccountView.swift */; };
 		8661514B2B5A88B100154C08 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661514A2B5A88B100154C08 /* CardView.swift */; };
-		866151512B5AC1BD00154C08 /* AdyenApplePayProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 866151502B5AC1BD00154C08 /* AdyenApplePayProvisioning */; };
-		866151542B5AC3FC00154C08 /* AdyenNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 866151532B5AC3FC00154C08 /* AdyenNetworking */; };
 		866151562B5AC54F00154C08 /* AppApiContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866151552B5AC54F00154C08 /* AppApiContext.swift */; };
 		866151582B5AC77200154C08 /* TokenActivationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866151572B5AC77200154C08 /* TokenActivationRequest.swift */; };
 		8661515A2B5AC7A200154C08 /* TokenActivationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866151592B5AC7A200154C08 /* TokenActivationResponse.swift */; };
@@ -33,6 +31,8 @@
 		86D8F9522B62AD8C00BFE96F /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8F9512B62AD8C00BFE96F /* URLSessionConfiguration+Mock.swift */; };
 		86D8F9542B62B12400BFE96F /* AppApiEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8F9532B62B12400BFE96F /* AppApiEnvironment.swift */; };
 		86D8F9562B62B16500BFE96F /* AppApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8F9552B62B16500BFE96F /* AppApiClient.swift */; };
+		86FADCC82CF46E1D00A7013C /* AdyenNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 86FADCC72CF46E1D00A7013C /* AdyenNetworking */; };
+		86FADCCB2CF46E7300A7013C /* AdyenApplePayProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 86FADCCA2CF46E7300A7013C /* AdyenApplePayProvisioning */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866151542B5AC3FC00154C08 /* AdyenNetworking in Frameworks */,
-				866151512B5AC1BD00154C08 /* AdyenApplePayProvisioning in Frameworks */,
+				86FADCC82CF46E1D00A7013C /* AdyenNetworking in Frameworks */,
+				86FADCCB2CF46E7300A7013C /* AdyenApplePayProvisioning in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +249,8 @@
 			);
 			name = ExampleApp;
 			packageProductDependencies = (
-				866151502B5AC1BD00154C08 /* AdyenApplePayProvisioning */,
-				866151532B5AC3FC00154C08 /* AdyenNetworking */,
+				86FADCC72CF46E1D00A7013C /* AdyenNetworking */,
+				86FADCCA2CF46E7300A7013C /* AdyenApplePayProvisioning */,
 			);
 			productName = ExampleApp;
 			productReference = 8632C4792B57D4F4007DCD1B /* ExampleApp.app */;
@@ -325,8 +325,8 @@
 			);
 			mainGroup = 8632C4702B57D4F4007DCD1B;
 			packageReferences = (
-				8661514F2B5AC1BD00154C08 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */,
-				866151522B5AC3FC00154C08 /* XCRemoteSwiftPackageReference "adyen-networking-ios" */,
+				86FADCC62CF46E1D00A7013C /* XCRemoteSwiftPackageReference "adyen-networking-ios" */,
+				86FADCC92CF46E7300A7013C /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */,
 			);
 			productRefGroup = 8632C47A2B57D4F4007DCD1B /* Products */;
 			projectDirPath = "";
@@ -722,15 +722,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8661514F2B5AC1BD00154C08 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Adyen/adyen-apple-pay-provisioning-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		866151522B5AC3FC00154C08 /* XCRemoteSwiftPackageReference "adyen-networking-ios" */ = {
+		86FADCC62CF46E1D00A7013C /* XCRemoteSwiftPackageReference "adyen-networking-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Adyen/adyen-networking-ios";
 			requirement = {
@@ -738,18 +730,26 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		86FADCC92CF46E7300A7013C /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Adyen/adyen-apple-pay-provisioning-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		866151502B5AC1BD00154C08 /* AdyenApplePayProvisioning */ = {
+		86FADCC72CF46E1D00A7013C /* AdyenNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8661514F2B5AC1BD00154C08 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */;
-			productName = AdyenApplePayProvisioning;
-		};
-		866151532B5AC3FC00154C08 /* AdyenNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 866151522B5AC3FC00154C08 /* XCRemoteSwiftPackageReference "adyen-networking-ios" */;
+			package = 86FADCC62CF46E1D00A7013C /* XCRemoteSwiftPackageReference "adyen-networking-ios" */;
 			productName = AdyenNetworking;
+		};
+		86FADCCA2CF46E7300A7013C /* AdyenApplePayProvisioning */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86FADCC92CF46E7300A7013C /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */;
+			productName = AdyenApplePayProvisioning;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

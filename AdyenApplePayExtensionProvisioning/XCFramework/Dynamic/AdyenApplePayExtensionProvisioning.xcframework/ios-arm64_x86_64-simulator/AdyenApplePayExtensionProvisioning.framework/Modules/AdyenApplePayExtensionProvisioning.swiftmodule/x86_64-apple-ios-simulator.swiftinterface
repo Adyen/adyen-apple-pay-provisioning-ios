@@ -6,12 +6,11 @@ import Foundation
 import PassKit
 import Swift
 import UIKit
-import WatchConnectivity
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol ExtensionProvisioningServiceDelegate : AnyObject {
-  func cardArt(forBrand: Swift.String) -> CoreGraphics.CGImage
+  func cardArt(paymentInstrumentId: Swift.String) -> CoreGraphics.CGImage
   #if compiler(>=5.3) && $AsyncAwait
   func provision(paymentInstrumentId: Swift.String, sdkOutput: Foundation.Data) async -> Foundation.Data?
   #endif
