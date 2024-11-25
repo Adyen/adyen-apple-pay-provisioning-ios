@@ -19,6 +19,7 @@ final class ViewModel: ObservableObject {
     private let paymentInstrumentId: String
     private var fetchingSdkInput: Bool = false
     private var sdkInput: Data?
+    private var watchAvailability = WatchAvailability()
 
     private var provisioningService: ProvisioningService?
 
@@ -42,18 +43,19 @@ final class ViewModel: ObservableObject {
         // Provisioning service is initialized with activation data received from the backend
         let provisioningService = try ProvisioningService(sdkInput: tokenActivationResponse.sdkInput)
         self.provisioningService = provisioningService
-        let canAdd = await provisioningService.canAddCardDetails()
+        let isWatchPaired = await watchAvailability.pair()
+        let canAdd = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
 
         // Checking if the card can be added to the phone and the watch.
         // If the creation of `ProvisioningService` didn't fail with error and
         // `canAddCard` is false, then the card is already added to the wallet
         if canAdd.canAddCard {
             let iphoneIconState: CardState.IconState = canAdd.canAddToPhone ? .deviceAvailable : .none
-            let watchIconState: CardState.IconState = !canAdd.watchAvailable ? .deviceUnavailable : (canAdd.canAddToWatch ? .deviceAvailable : .none)
+            let watchIconState: CardState.IconState = !isWatchPaired ? .deviceUnavailable : (canAdd.canAddToWatch ? .deviceAvailable : .none)
             cardState = .canAdd(iphoneIconState, watchIconState)
             setAppState(.banner)
         } else {
-            let watchIconState: CardState.IconState = canAdd.watchAvailable ? .deviceAvailable : .none
+            let watchIconState: CardState.IconState = isWatchPaired ? .deviceAvailable : .none
             cardState = .added(watchIconState)
             setAppState(.signedIn(self))
         }
@@ -83,7 +85,11 @@ final class ViewModel: ObservableObject {
 }
 
 extension ViewModel: ProvisioningServiceDelegate {
-    func provision(sdkOutput: Data) async -> Data? {
+    func provision(sdkOutput: Data, paymentInstrumentId: String) async -> Data? {
+        guard self.paymentInstrumentId == paymentInstrumentId else {
+            return nil
+        }
+
         let provisionRequest = ProvisionCardRequest(
             paymentInstrumentId: paymentInstrumentId,
             sdkOutput: sdkOutput
