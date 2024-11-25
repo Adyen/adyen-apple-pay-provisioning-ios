@@ -225,10 +225,10 @@ let provisioningService = ExtensionProvisioningService(sdkInput: sdkInput)
 let provisioningService = ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
 ```
 
-3. The Wallet app will show a preview of the card(s) to the user. To supply the SDK with the correct image of the card, implement `ExtensionProvisioningServiceDelegate` to receive the `cardArt(forBrand: String)` callback from the Adyen SDK. In this method, return the card art for the specified brand. Make sure the card art accurately represents the card that will be added to Apple Wallet.
+3. The Wallet app will show a preview of the card(s) to the user. To supply the SDK with the correct image of the card, implement `ExtensionProvisioningServiceDelegate` to receive the `cardArt(paymentInstrumentId: String)` callback from the Adyen SDK. In this method, return the card art for the specified paymentInstrumentId. Make sure the card art accurately represents the card that will be added to Apple Wallet.
 
 ```swift
-func cardArt(forBrand brand: String) -> CGImage {
+func cardArt(paymentInstrumentId: String) -> CGImage {
    // Return card art
 }
 ```
