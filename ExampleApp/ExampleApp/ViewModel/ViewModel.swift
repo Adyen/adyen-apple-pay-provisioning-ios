@@ -17,14 +17,12 @@ final class ViewModel: ObservableObject {
 
     private let apiClient: AsyncAPIClientProtocol
     private let paymentInstrumentId: String
-    private var fetchingSdkInput: Bool = false
-    private var sdkInput: Data?
     private var watchAvailability = WatchAvailability()
 
     private var provisioningService: ProvisioningService?
 
     init(appState: AppState = .signedOut,
-         cardState: CardState = .unknown,
+         cardState: CardState = .cannotProvision,
          paymentInstrumentId: String,
          apiClient: AsyncAPIClientProtocol) {
         self.appState = appState
@@ -44,19 +42,14 @@ final class ViewModel: ObservableObject {
         let provisioningService = try ProvisioningService(sdkInput: tokenActivationResponse.sdkInput)
         self.provisioningService = provisioningService
         let isWatchPaired = await watchAvailability.pair()
-        let canAdd = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
+        let cardDetails = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
 
-        // Checking if the card can be added to the phone and the watch.
-        // If the creation of `ProvisioningService` didn't fail with error and
-        // `canAddCard` is false, then the card is already added to the wallet
-        if canAdd.canAddCard {
-            let iphoneIconState: CardState.IconState = canAdd.canAddToPhone ? .deviceAvailable : .none
-            let watchIconState: CardState.IconState = !isWatchPaired ? .deviceUnavailable : (canAdd.canAddToWatch ? .deviceAvailable : .none)
-            cardState = .canAdd(iphoneIconState, watchIconState)
+        // Checking if the card can be added to the phone or the watch.
+        if cardDetails.canAddCard {
+            cardState = .canProvision(isWatchPaired, cardDetails.canAddToWatch, cardDetails.canAddToPhone)
             setAppState(.banner)
         } else {
-            let watchIconState: CardState.IconState = isWatchPaired ? .deviceAvailable : .none
-            cardState = .added(watchIconState)
+            cardState = .provisioned(isWatchPaired, provisioningService.passURL())
             setAppState(.signedIn(self))
         }
     }
@@ -76,7 +69,7 @@ final class ViewModel: ObservableObject {
         }
 
         switch cardState {
-        case .canAdd:
+        case .canProvision:
             try provisioningService.start(delegate: self, presentingViewController: viewController)
         default:
             throw AppError.generic

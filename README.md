@@ -35,14 +35,17 @@ provisioningService = try ProvisioningService(sdkInput: sdkInput)
 
 ### Checking if a card can be added
 
-Check if the cardholder can add a payment card to their Apple Wallet (phone or watch). If the card cannot be added it means it is already in the wallet. However, when the watch is not available it is not possible to determine if that card is already added. Watch availability needs to be determined on the caller's side by using `WCSession`.
+Check if the cardholder can add a payment card to their Apple Wallet (phone or watch). If the card cannot be added it means it is already in the wallet. However, when the watch is not available it is not possible to determine if that card is already added. Watch availability needs to be determined on the caller's side by using `WCSession` or the `WatchAvailability` class.
 ```swift
-let state = provisioningService.canAddCardDetails(isWatchAvailable: true)
+let watchAvailability = WatchAvailability()
+let isWatchActivated = await watchAvailability.activate()
+let state = provisioningService.canAddCardDetails(isWatchActivated: isWatchActivated)
 
 if state.canAddCard {
     // show "Add to Apple Wallet" button
 }
 ```
+**Tip:** If you have provisioned a card on your device and it appears in the wallet but `canAddCard` is still `true`, it is very likely the card configuration profile is not complete on the Card Network side (Visa, Mastercard).
 
 ### Initiate card provisioning
 

@@ -16,9 +16,13 @@ struct ContentView: View {
         ZStack {
             switch viewModel.appState {
             case .signedOut:
-                SignInView {
-                    Task {
-                        try await viewModel.fetchState()
+                SignInView { authenticated in
+                    if authenticated {
+                        Task {
+                            try await viewModel.fetchState()
+                        }
+                    } else {
+                        // Failed to sign in
                     }
                 }
             case .loading:

@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "AdyenApplePayExtensionProvisioning",
+    "printedName": "AdyenApplePayExtensionProvisioning",
     "children": [
       {
         "kind": "Import",
@@ -170,6 +170,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -487,6 +503,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -828,7 +858,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -852,6 +898,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -929,6 +989,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -983,14 +1057,14 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 483,
       "length": 10,
       "value": "\"applePay\""
     },
     {
-      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 736,
       "length": 10,
