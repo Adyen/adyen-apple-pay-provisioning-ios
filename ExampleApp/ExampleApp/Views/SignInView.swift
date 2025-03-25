@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    let completion: () -> Void
+    let completion: (Bool) -> Void
     @State private var userName = ""
     @State private var password = ""
 
@@ -52,7 +52,7 @@ struct SignInView: View {
                     .foregroundColor(.white)
 
                 Button("Get started") {
-                    completion()
+                    completion(true)
                 }
                 .frame(maxWidth: .infinity, maxHeight: 44)
                 .multilineTextAlignment(.center)
@@ -77,5 +77,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView {}
+    SignInView { _ in }
 }

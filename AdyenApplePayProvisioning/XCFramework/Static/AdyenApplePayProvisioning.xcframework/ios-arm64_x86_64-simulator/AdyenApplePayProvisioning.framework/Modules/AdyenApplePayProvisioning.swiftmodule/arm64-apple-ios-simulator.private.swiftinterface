@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name AdyenApplePayProvisioning
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 @_exported import AdyenApplePayProvisioning
 import Foundation
 import PassKit
@@ -11,9 +12,7 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol ProvisioningServiceDelegate : AnyObject {
-  #if compiler(>=5.3) && $AsyncAwait
   func provision(sdkOutput: Foundation.Data, paymentInstrumentId: Swift.String) async -> Foundation.Data?
-  #endif
   func didFinishProvisioning(with pass: PassKit.PKPaymentPass?, error: (any Swift.Error)?)
 }
 public enum ProvisioningServiceError : Foundation.LocalizedError {
@@ -35,24 +34,26 @@ public struct CanAddCardDetails {
 }
 public class ProvisioningService {
   public init(sdkInput: Foundation.Data) throws
+  @available(*, deprecated, renamed: "canAddCard(isWatchActivated:)")
   public func canAddCard(isWatchPaired: Swift.Bool) -> Swift.Bool
+  public func canAddCard(isWatchActivated: Swift.Bool) -> Swift.Bool
   public func passURL() -> Foundation.URL?
+  @available(*, deprecated, renamed: "canAddCardDetails(isWatchActivated:)")
   public func canAddCardDetails(isWatchPaired: Swift.Bool) -> AdyenApplePayProvisioning.CanAddCardDetails
+  public func canAddCardDetails(isWatchActivated: Swift.Bool) -> AdyenApplePayProvisioning.CanAddCardDetails
   public func start(delegate: any AdyenApplePayProvisioning.ProvisioningServiceDelegate, presentingViewController: UIKit.UIViewController) throws
   @objc deinit
 }
 extension AdyenApplePayProvisioning.ProvisioningService {
-  #if compiler(>=5.3) && $AsyncAwait
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, generateRequestWithCertificateChain certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data) async -> PassKit.PKAddPaymentPassRequest?
-  #endif
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, didFinishAdding pass: PassKit.PKPaymentPass?, error: (any Swift.Error)?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WatchAvailability : ObjectiveC.NSObject, WatchConnectivity.WCSessionDelegate {
-  public typealias IsWatchPaired = Swift.Bool
+  public typealias IsWatchSessionActivated = Swift.Bool
   @objc override convenience dynamic public init()
-  #if compiler(>=5.3) && $AsyncAwait
-  @_Concurrency.MainActor final public func pair() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchPaired
-  #endif
+  @available(*, deprecated, renamed: "activate", message: "Use `activate` method instead.")
+  @_Concurrency.MainActor final public func pair() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchSessionActivated
+  @_Concurrency.MainActor final public func activate() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchSessionActivated
   @objc final public func session(_ session: WatchConnectivity.WCSession, activationDidCompleteWith activationState: WatchConnectivity.WCSessionActivationState, error: (any Swift.Error)?)
   @objc final public func sessionDidBecomeInactive(_ session: WatchConnectivity.WCSession)
   @objc final public func sessionDidDeactivate(_ session: WatchConnectivity.WCSession)

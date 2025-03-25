@@ -40,3 +40,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./ApiDocumentation
         destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/Api
+        enable_jekyll: true

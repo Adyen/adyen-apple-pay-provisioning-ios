@@ -16,7 +16,7 @@ struct ProvisionCardRequest: Request {
     let sdkOutput: Data
     var path: String { "paymentInstruments/\(paymentInstrumentId)/networkTokenActivationData" }
     var counter: UInt = 0
-    let headers: [String: String] = [:]
+    var headers: [String: String] = [:]
     let queryParameters: [URLQueryItem] = []
     let method: AdyenNetworking.HTTPMethod = .post
 

@@ -51,11 +51,8 @@ struct CardView: View {
 
     @ViewBuilder
     func view(for state: ViewModel.CardState) -> some View {
-        switch state {
-        case let .canAdd(phoneIconState, watchIconState):
-            HStack(spacing: 10) {
-                Spacer()
-
+        VStack(spacing: 10) {
+            if case .canProvision = state {
                 AddPassToWalletButton {
                     do {
                         try viewModel.addCardToWallet()
@@ -64,38 +61,20 @@ struct CardView: View {
                     }
                 }
                 .frame(height: 44)
-
-                deviceIcon(iconState: phoneIconState, isPhone: true)
-
-                deviceIcon(iconState: watchIconState, isPhone: false)
-
-                Spacer()
             }
-        case let .added(watchIconState):
-            HStack(spacing: 10) {
-                Spacer()
 
-                Text("Available in Apple Wallet")
-
-                deviceIcon(iconState: watchIconState, isPhone: false)
-
-                Spacer()
+            if case let .provisioned(_, passUrl) = state, let url = passUrl {
+                Button("Open Wallet") {
+                    UIApplication.shared.open(url)
+                }
+                .frame(width: 160)
+                .foregroundColor(.white)
             }
-        case .unknown:
-            Spacer()
-        }
-    }
 
-    @ViewBuilder
-    func deviceIcon(iconState: ViewModel.CardState.IconState, isPhone: Bool) -> some View {
-        switch iconState {
-        case .deviceAvailable:
-            Image(systemName: isPhone ? "iphone.gen2" : "applewatch")
-        case .deviceUnavailable:
-            Image(systemName: isPhone ? "iphone.gen2.slash" : "applewatch.slash")
-        case .none:
-            EmptyView()
+            Text(state.text)
+                .multilineTextAlignment(.center)
         }
+        .padding(10)
     }
 }
 

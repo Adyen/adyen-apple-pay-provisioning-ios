@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Adyen/adyen-apple-pay-provisioning-ios",
       "state" : {
-        "branch" : "main",
-        "revision" : "4a881045281104d775d725910c823f294a96cbca"
+        "revision" : "4f76385cfa73e2343038370f4b872c6f1247e25d",
+        "version" : "2.0.1"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Adyen/adyen-networking-ios",
       "state" : {
-        "revision" : "47b566e8ef612c80dc854c0f13cb6b91ba79a80b",
-        "version" : "2.0.0"
+        "revision" : "43fd5d93f8587623eb134e3968f099e0417e74f6",
+        "version" : "3.0.1"
       }
     }
   ],

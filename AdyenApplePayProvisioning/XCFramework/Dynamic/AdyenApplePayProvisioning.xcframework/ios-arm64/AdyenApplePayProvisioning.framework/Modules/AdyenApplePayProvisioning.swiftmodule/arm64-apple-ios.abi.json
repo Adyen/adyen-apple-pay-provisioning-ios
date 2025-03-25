@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "AdyenApplePayProvisioning",
+    "printedName": "AdyenApplePayProvisioning",
     "children": [
       {
         "kind": "Import",
@@ -133,6 +133,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -479,6 +495,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "LocalizedError",
             "printedName": "LocalizedError",
             "usr": "s:10Foundation14LocalizedErrorP",
@@ -648,6 +678,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -706,6 +752,36 @@
             "usr": "s:25AdyenApplePayProvisioning0D7ServiceC10canAddCard13isWatchPairedS2b_tF",
             "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC10canAddCard13isWatchPairedS2b_tF",
             "moduleName": "AdyenApplePayProvisioning",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canAddCard",
+            "printedName": "canAddCard(isWatchActivated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC10canAddCard16isWatchActivatedS2b_tF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC10canAddCard16isWatchActivatedS2b_tF",
+            "moduleName": "AdyenApplePayProvisioning",
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
@@ -763,6 +839,36 @@
             "declKind": "Func",
             "usr": "s:25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetails13isWatchPairedAA03CanghI0VSb_tF",
             "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetails13isWatchPairedAA03CanghI0VSb_tF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canAddCardDetails",
+            "printedName": "canAddCardDetails(isWatchActivated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CanAddCardDetails",
+                "printedName": "AdyenApplePayProvisioning.CanAddCardDetails",
+                "usr": "s:25AdyenApplePayProvisioning17CanAddCardDetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetails16isWatchActivatedAA03CanghI0VSb_tF",
+            "mangledName": "$s25AdyenApplePayProvisioning0D7ServiceC17canAddCardDetails16isWatchActivatedAA03CanghI0VSb_tF",
             "moduleName": "AdyenApplePayProvisioning",
             "declAttributes": [
               "AccessControl",
@@ -929,6 +1035,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1012,6 +1134,32 @@
             "declKind": "Func",
             "usr": "s:25AdyenApplePayProvisioning17WatchAvailabilityC4pairSbyYaF",
             "mangledName": "$s25AdyenApplePayProvisioning17WatchAvailabilityC4pairSbyYaF",
+            "moduleName": "AdyenApplePayProvisioning",
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "activate",
+            "printedName": "activate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AdyenApplePayProvisioning17WatchAvailabilityC8activateSbyYaF",
+            "mangledName": "$s25AdyenApplePayProvisioning17WatchAvailabilityC8activateSbyYaF",
             "moduleName": "AdyenApplePayProvisioning",
             "declAttributes": [
               "Final",
@@ -1149,6 +1297,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1263,6 +1425,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1334,6 +1510,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1411,6 +1601,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1465,18 +1669,25 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 483,
       "length": 10,
       "value": "\"applePay\""
     },
     {
-      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 736,
       "length": 10,
       "value": "\"applePay\""
+    },
+    {
+      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/WatchAvailability.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2163,
+      "length": 2,
+      "value": "10"
     }
   ]
 }
