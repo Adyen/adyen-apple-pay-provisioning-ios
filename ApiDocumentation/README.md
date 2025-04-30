@@ -57,8 +57,8 @@ import AdyenApplePayProvisioning
 let watchAvailability = WatchAvailability()
 
 let provisioningService = ProvisioningService(sdkInput: sdkInput)
-let isWatchPaired = await watchAvailability.pair()
-let state = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
+let isWatchActivated = await watchAvailability.activate()
+let state = provisioningService.canAddCardDetails(isWatchActivated: isWatchActivated)
 
 if state.canAddCard {
     // show "Add to Apple Wallet" button

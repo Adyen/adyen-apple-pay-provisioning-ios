@@ -281,7 +281,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import ObjectiveC;
-@import WatchConnectivity;
 #endif
 
 #endif
@@ -308,13 +307,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-@class WCSession;
 
-/// <code>WatchAvailability</code> class provides functionality to check the availability of the Apple Watch and activate it.
+/// <code>WatchAvailability</code> class provides functionality to check the availability of the Apple Watch.
 /// The state is retrieved from <code>WCSession.default</code>, which is a global state, be cautious if your app is already using <code>WCSession</code>
 /// as this class reassigns <code>WCSession.default.delegate</code> property.
 /// Avoid creating multiple instances of <code>WatchAvailability</code>or calling <code>activate()</code> method several times in a row.
-/// In order to ensure that a card can be added to the watch, activate the session then start the provisioning::
+/// In order to ensure that a card can be added to the watch, activate the session then start the provisioning:
 /// \code
 /// let watchAvailability = WatchAvailability()
 /// let isWatchActivated = await watchAvailability.activate()
@@ -323,11 +321,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///
 /// \endcode
 SWIFT_CLASS("_TtC25AdyenApplePayProvisioning17WatchAvailability")
-@interface WatchAvailability : NSObject <WCSessionDelegate>
+@interface WatchAvailability : NSObject
 - (nonnull instancetype)init;
-- (void)session:(WCSession * _Nonnull)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError * _Nullable)error;
-- (void)sessionDidBecomeInactive:(WCSession * _Nonnull)session;
-- (void)sessionDidDeactivate:(WCSession * _Nonnull)session;
 @end
 
 #endif
