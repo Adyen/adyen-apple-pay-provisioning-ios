@@ -41,15 +41,15 @@ final class ViewModel: ObservableObject {
         // Provisioning service is initialized with activation data received from the backend
         let provisioningService = try ProvisioningService(sdkInput: tokenActivationResponse.sdkInput)
         self.provisioningService = provisioningService
-        let isWatchPaired = await watchAvailability.pair()
-        let cardDetails = provisioningService.canAddCardDetails(isWatchPaired: isWatchPaired)
+        let isWatchActivated = await watchAvailability.activate()
+        let cardDetails = provisioningService.canAddCardDetails(isWatchActivated: isWatchActivated)
 
         // Checking if the card can be added to the phone or the watch.
         if cardDetails.canAddCard {
-            cardState = .canProvision(isWatchPaired, cardDetails.canAddToWatch, cardDetails.canAddToPhone)
+            cardState = .canProvision(isWatchActivated, cardDetails.canAddToWatch, cardDetails.canAddToPhone)
             setAppState(.banner)
         } else {
-            cardState = .provisioned(isWatchPaired, provisioningService.passURL())
+            cardState = .provisioned(isWatchActivated, provisioningService.passURL())
             setAppState(.signedIn(self))
         }
     }

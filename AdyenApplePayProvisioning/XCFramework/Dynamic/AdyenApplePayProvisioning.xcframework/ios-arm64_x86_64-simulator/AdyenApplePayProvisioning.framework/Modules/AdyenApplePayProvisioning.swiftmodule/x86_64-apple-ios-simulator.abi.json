@@ -1168,114 +1168,6 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "session",
-            "printedName": "session(_:activationDidCompleteWith:error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WCSession",
-                "printedName": "WatchConnectivity.WCSession",
-                "usr": "c:objc(cs)WCSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WCSessionActivationState",
-                "printedName": "WatchConnectivity.WCSessionActivationState",
-                "usr": "c:@E@WCSessionActivationState"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any Swift.Error)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "any Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AdyenApplePayProvisioning@objc(cs)WatchAvailability(im)session:activationDidCompleteWithState:error:",
-            "mangledName": "$s25AdyenApplePayProvisioning17WatchAvailabilityC7session_25activationDidCompleteWith5errorySo9WCSessionC_So0M15ActivationStateVs5Error_pSgtF",
-            "moduleName": "AdyenApplePayProvisioning",
-            "objc_name": "session:activationDidCompleteWithState:error:",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "sessionDidBecomeInactive",
-            "printedName": "sessionDidBecomeInactive(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WCSession",
-                "printedName": "WatchConnectivity.WCSession",
-                "usr": "c:objc(cs)WCSession"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AdyenApplePayProvisioning@objc(cs)WatchAvailability(im)sessionDidBecomeInactive:",
-            "mangledName": "$s25AdyenApplePayProvisioning17WatchAvailabilityC24sessionDidBecomeInactiveyySo9WCSessionCF",
-            "moduleName": "AdyenApplePayProvisioning",
-            "objc_name": "sessionDidBecomeInactive:",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "sessionDidDeactivate",
-            "printedName": "sessionDidDeactivate(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WCSession",
-                "printedName": "WatchConnectivity.WCSession",
-                "usr": "c:objc(cs)WCSession"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AdyenApplePayProvisioning@objc(cs)WatchAvailability(im)sessionDidDeactivate:",
-            "mangledName": "$s25AdyenApplePayProvisioning17WatchAvailabilityC20sessionDidDeactivateyySo9WCSessionCF",
-            "moduleName": "AdyenApplePayProvisioning",
-            "objc_name": "sessionDidDeactivate:",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1669,23 +1561,23 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 483,
       "length": 10,
       "value": "\"applePay\""
     },
     {
-      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 736,
       "length": 10,
       "value": "\"applePay\""
     },
     {
-      "filePath": "\/Users\/ciadm\/builds\/t1_syyFX\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/WatchAvailability.swift",
+      "filePath": "\/Users\/ciadm\/builds\/VLCdMj58\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioning\/WatchAvailability.swift",
       "kind": "IntegerLiteral",
-      "offset": 2163,
+      "offset": 3865,
       "length": 2,
       "value": "10"
     }

@@ -1,13 +1,13 @@
 {
-  "originHash" : "d7c7c8dc3e6e9941f759fa620dbfd7a18df0d884d1d55a4addcdcb15b24c6067",
+  "originHash" : "c9fb981d8f591fd04ed28351ad2622d44aaca705b53f280b219055e6222defb0",
   "pins" : [
     {
       "identity" : "adyen-apple-pay-provisioning-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Adyen/adyen-apple-pay-provisioning-ios",
       "state" : {
-        "revision" : "4f76385cfa73e2343038370f4b872c6f1247e25d",
-        "version" : "2.0.1"
+        "revision" : "3a9f37046df674f317311a10c0a69e802677894b",
+        "version" : "2.0.2"
       }
     },
     {

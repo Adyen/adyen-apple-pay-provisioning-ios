@@ -48,14 +48,11 @@ extension AdyenApplePayProvisioning.ProvisioningService {
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, generateRequestWithCertificateChain certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data) async -> PassKit.PKAddPaymentPassRequest?
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, didFinishAdding pass: PassKit.PKPaymentPass?, error: (any Swift.Error)?)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WatchAvailability : ObjectiveC.NSObject, WatchConnectivity.WCSessionDelegate {
-  public typealias IsWatchSessionActivated = Swift.Bool
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WatchAvailability : ObjectiveC.NSObject {
+  public typealias IsWatchActivated = Swift.Bool
   @objc override convenience dynamic public init()
   @available(*, deprecated, renamed: "activate", message: "Use `activate` method instead.")
-  @_Concurrency.MainActor final public func pair() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchSessionActivated
-  @_Concurrency.MainActor final public func activate() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchSessionActivated
-  @objc final public func session(_ session: WatchConnectivity.WCSession, activationDidCompleteWith activationState: WatchConnectivity.WCSessionActivationState, error: (any Swift.Error)?)
-  @objc final public func sessionDidBecomeInactive(_ session: WatchConnectivity.WCSession)
-  @objc final public func sessionDidDeactivate(_ session: WatchConnectivity.WCSession)
+  @_Concurrency.MainActor final public func pair() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchActivated
+  @_Concurrency.MainActor final public func activate() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchActivated
   @objc deinit
 }
