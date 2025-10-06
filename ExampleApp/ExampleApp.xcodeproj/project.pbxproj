@@ -850,7 +850,7 @@
 			repositoryURL = "https://github.com/Adyen/adyen-apple-pay-provisioning-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
+				minimumVersion = 2.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
