@@ -1,42 +1,58 @@
 name: Deploy Docs 🚀
+
 on:
   push:
     branches:
-      - 'main'
+      - main
 
-permissions: write-all
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: false
 
 jobs:
   Deploy:
-    runs-on: macos-14
-    permissions:
-      contents: write
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Set current marketing version
-      run: echo "::set-output name=MARKETING_VERSION::$(cat version.txt)"
-      id: get-current-marketing-version
+      - name: Read marketing version
+        id: version
+        run: |
+          VER="$(cat version.txt)"
+          echo "MARKETING_VERSION=$VER" >> "$GITHUB_ENV"
 
-    - name: Deploy AdyenApplePayProvisioning to current version
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./AdyenApplePayProvisioning/Documentation/html
-        destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/AdyenApplePayProvisioning
+      - name: Stage docs into a single publish dir
+        run: |
+          set -euxo pipefail
+          STAGE=".stage-docs"
+          rm -rf "$STAGE"
+          mkdir -p "$STAGE/${MARKETING_VERSION}/AdyenApplePayProvisioning"
+          mkdir -p "$STAGE/${MARKETING_VERSION}/AdyenApplePayExtensionProvisioning"
+          mkdir -p "$STAGE/${MARKETING_VERSION}/Api"
 
-    - name: Deploy AdyenApplePayExtensionProvisioning to current version
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./AdyenApplePayExtensionProvisioning/Documentation/html
-        destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/AdyenApplePayExtensionProvisioning
+          cp -R ./AdyenApplePayProvisioning/Documentation/html/* \
+                "$STAGE/${MARKETING_VERSION}/AdyenApplePayProvisioning/"
+          cp -R ./AdyenApplePayExtensionProvisioning/Documentation/html/* \
+                "$STAGE/${MARKETING_VERSION}/AdyenApplePayExtensionProvisioning/"
+          cp -R ./ApiDocumentation/* \
+                "$STAGE/${MARKETING_VERSION}/Api/"
 
-    - name: Deploy Full Documentation to current version
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ApiDocumentation
-        destination_dir: ./${{ steps.get-current-marketing-version.outputs.MARKETING_VERSION }}/Api
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./.stage-docs
+          keep_files: true
+          force_orphan: false
+          commit_message: |
+            docs: publish ${MARKETING_VERSION}
+            - AdyenApplePayProvisioning
+            - AdyenApplePayExtensionProvisioning
+            - API
