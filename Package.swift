@@ -11,21 +11,21 @@ public let package = Package(
     products: [
         .library(
             name: "AdyenApplePayProvisioning",
-            targets: ["AdyenApplePayProvisioning"]
+            targets: ["AdyenApplePayProvisioningBinary"]
         ),
         .library(
             name: "AdyenApplePayExtensionProvisioning",
-            targets: ["AdyenApplePayExtensionProvisioning"]
+            targets: ["AdyenApplePayExtensionProvisioningBinary"]
         )
     ],
     targets: [
         .binaryTarget(
-            name: "AdyenApplePayProvisioning",
-            path: "AdyenApplePayProvisioning/XCFramework/Dynamic/AdyenApplePayProvisioning.xcframework"
+            name: "AdyenApplePayProvisioningBinary",
+            path: "AdyenApplePayProvisioning/XCFramework/Static/AdyenApplePayProvisioning.xcframework"
         ),
         .binaryTarget(
-            name: "AdyenApplePayExtensionProvisioning",
-            path: "AdyenApplePayExtensionProvisioning/XCFramework/Dynamic/AdyenApplePayExtensionProvisioning.xcframework"
+            name: "AdyenApplePayExtensionProvisioningBinary",
+            path: "AdyenApplePayExtensionProvisioning/XCFramework/Static/AdyenApplePayExtensionProvisioning.xcframework"
         )
     ]
 )
