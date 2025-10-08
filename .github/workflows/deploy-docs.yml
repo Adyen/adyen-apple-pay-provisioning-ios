@@ -43,6 +43,33 @@ jobs:
           cp -R ./ApiDocumentation/* \
                 "$STAGE/${MARKETING_VERSION}/Api/"
 
+          # Create root index.html with links to all sections (always points to latest version)
+          cat > "$STAGE/index.html" <<EOF
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <title>Documentation – ${MARKETING_VERSION}</title>
+              <style>
+                body { font-family: system-ui, sans-serif; max-width: 600px; margin: 3rem auto; line-height: 1.6; }
+                h1 { font-size: 1.8rem; }
+                ul { list-style: none; padding: 0; }
+                li { margin: 0.5rem 0; }
+                a { text-decoration: none; color: #0366d6; }
+                a:hover { text-decoration: underline; }
+              </style>
+            </head>
+            <body>
+              <h1>Documentation (${MARKETING_VERSION})</h1>
+              <ul>
+                <li><a href="./${MARKETING_VERSION}/AdyenApplePayProvisioning/">Adyen Apple Pay Provisioning</a></li>
+                <li><a href="./${MARKETING_VERSION}/AdyenApplePayExtensionProvisioning/">Adyen Apple Pay Extension Provisioning</a></li>
+                <li><a href="./${MARKETING_VERSION}/Api/">API Documentation</a></li>
+              </ul>
+            </body>
+          </html>
+          EOF
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -51,6 +78,7 @@ jobs:
           publish_dir: ./.stage-docs
           keep_files: true
           force_orphan: false
+          enable_jekyll: true   # don’t create .nojekyll
           commit_message: |
             docs: publish ${MARKETING_VERSION}
             - AdyenApplePayProvisioning
