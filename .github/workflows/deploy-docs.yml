@@ -62,8 +62,8 @@ jobs:
             <body>
               <h1>Documentation (${MARKETING_VERSION})</h1>
               <ul>
-                <li><a href="./${MARKETING_VERSION}/AdyenApplePayProvisioning/">Adyen Apple Pay Provisioning</a></li>
-                <li><a href="./${MARKETING_VERSION}/AdyenApplePayExtensionProvisioning/">Adyen Apple Pay Extension Provisioning</a></li>
+                <li><a href="./${MARKETING_VERSION}/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning">Adyen Apple Pay Provisioning</a></li>
+                <li><a href="./${MARKETING_VERSION}/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning">Adyen Apple Pay Extension Provisioning</a></li>
                 <li><a href="./${MARKETING_VERSION}/Api/">API Documentation</a></li>
               </ul>
             </body>
