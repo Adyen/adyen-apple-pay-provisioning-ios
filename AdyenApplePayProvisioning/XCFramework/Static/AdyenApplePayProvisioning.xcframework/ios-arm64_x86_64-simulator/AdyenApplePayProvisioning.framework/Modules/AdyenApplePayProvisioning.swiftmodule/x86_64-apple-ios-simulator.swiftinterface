@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target x86_64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AdyenApplePayProvisioning
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 @_exported import AdyenApplePayProvisioning
 import Foundation
 import PassKit
@@ -12,8 +12,12 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol ProvisioningServiceDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func provision(sdkOutput: Foundation.Data, paymentInstrumentId: Swift.String) async -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func didFinishProvisioning(with pass: PassKit.PKPaymentPass?, error: (any Swift.Error)?)
+  #endif
 }
 public enum ProvisioningServiceError : Foundation.LocalizedError {
   case invalidSDKInput
@@ -23,9 +27,11 @@ public enum ProvisioningServiceError : Foundation.LocalizedError {
   case userCancelled
   case delegateNotSet
   case unableToConstructSDKOutput
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 public struct CanAddCardDetails {
   public let canAddCard: Swift.Bool
@@ -37,7 +43,9 @@ public class ProvisioningService {
   @available(*, deprecated, renamed: "canAddCard(isWatchActivated:)")
   public func canAddCard(isWatchPaired: Swift.Bool) -> Swift.Bool
   public func canAddCard(isWatchActivated: Swift.Bool) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func passURL() -> Foundation.URL?
+  #endif
   @available(*, deprecated, renamed: "canAddCardDetails(isWatchActivated:)")
   public func canAddCardDetails(isWatchPaired: Swift.Bool) -> AdyenApplePayProvisioning.CanAddCardDetails
   public func canAddCardDetails(isWatchActivated: Swift.Bool) -> AdyenApplePayProvisioning.CanAddCardDetails
@@ -45,14 +53,20 @@ public class ProvisioningService {
   @objc deinit
 }
 extension AdyenApplePayProvisioning.ProvisioningService {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, generateRequestWithCertificateChain certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data) async -> PassKit.PKAddPaymentPassRequest?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func addPaymentPassViewController(_ controller: UIKit.UIViewController, didFinishAdding pass: PassKit.PKPaymentPass?, error: (any Swift.Error)?)
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WatchAvailability : ObjectiveC.NSObject {
   public typealias IsWatchActivated = Swift.Bool
   @objc override convenience dynamic public init()
-  @available(*, deprecated, renamed: "activate", message: "Use `activate` method instead.")
+  @available(*, deprecated, message: "Use WatchAvailability.activate() instead.")
   @_Concurrency.MainActor final public func pair() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchActivated
+  @_Concurrency.MainActor public static func activate() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchActivated
+  @available(*, deprecated, message: "Use the static activate() method to avoid overriding the global WCSession.default delegate in multiple instances.")
   @_Concurrency.MainActor final public func activate() async -> AdyenApplePayProvisioning.WatchAvailability.IsWatchActivated
   @objc deinit
 }

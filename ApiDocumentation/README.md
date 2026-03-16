@@ -18,11 +18,20 @@ Before you start, make sure your environment meets the following requirements:
 
 -----
 
+### Entitlements
+
+To use In-App Provisioning, you must add the **In-App Provisioning** (`com.apple.developer.payment-pass-provisioning`) entitlement to your App ID. 
+
+> [!IMPORTANT]
+> This entitlement must be added to **all targets** involved in the flow: the main App, the Non-UI Extension, and the UI Extension. This can be done manually in your `.entitlements` files or via the **+ Capability** action in each target's **Signing & Capabilities** tab in Xcode.
+
+---
+
 ## In-app provisioning
 
-With Apple Pay in-app provisioning, your cardholder can add their card directly from your app. During the in-app flow, the cardholder taps **Add to Apple Wallet** and the provisioning process starts and finishes within your app providing a seamless flow.
+With Apple Pay In-App provisioning, your cardholder can add their card directly from your app. During the In-App flow, the cardholder taps **Add to Apple Wallet** and the provisioning process starts and finishes within your app providing a seamless flow.
 
-The following diagram walks you through the in-app provisioning flow. Green labels correspond to the steps described further on the page:
+The following diagram walks you through the In-App provisioning flow. Green labels correspond to the steps described further on the page:
 
 ![](Resources/in-app-flow.svg)
 
@@ -49,6 +58,7 @@ Before you can start card provisioning, you must get activation data for the pay
     ```
 
     The response contains the `sdkInput` object that you need to initialize the SDK in the next step.
+    Cache the sdkInput for potential reuse from the wallet extension.
 
 2. Pass the `sdkInput` to your app.
 
@@ -59,11 +69,8 @@ After receiving the `sdkInput`, initialize the `ProvisioningService`. Use it to 
 ```swift
 import AdyenApplePayProvisioning
 
-// Create a single instance of WatchAvailability
-let watchAvailability = WatchAvailability()
-
 let provisioningService = try ProvisioningService(sdkInput: sdkInput)
-let isWatchActivated = await watchAvailability.activate()
+let isWatchActivated = await WatchAvailability.activate()
 let state = provisioningService.canAddCardDetails(isWatchActivated: isWatchActivated)
 
 if state.canAddCard {
@@ -135,7 +142,7 @@ func didFinishProvisioning(with pass: PKPaymentPass?, error: Error?) {
 
 ## Provisioning from the Wallet App
 
-You can also allow cardholders to provision cards directly from the Apple Wallet app. To enable this, you must implement a wallet extension. Your app's name and icon will then appear in the Wallet's list of apps that can provide cards.
+You can also allow cardholders to provision cards directly from the Apple Wallet app. To enable this, you must implement wallet extensions. Your app's name and icon will then appear in the Wallet's "From Apps on Your iPhone" section.
 
 The following diagram walks you through the wallet extension provisioning flow. The green labels correspond to the steps described below:
 
@@ -149,29 +156,33 @@ The following diagram walks you through the wallet extension provisioning flow. 
 
 ### Before you begin
 
-Before implementing the Wallet provisioning flow:
+Before implementing the Wallet provisioning flow:   
 
 1. [Add the Apple Wallet extension](#add-the-apple-wallet-extension).
 2. [Add the Apple Wallet UI extension](#add-the-apple-wallet-ui-extension).
 
 #### Add the Apple Wallet extension
 
-1. Add a new target to your Xcode project with any Extension template. Then, change the values under the `NSExtension` dictionary in the `Info.plist` as follows:
+1. Add a new extension target to your Xcode project. The best way to create this is by using the **Action Extension** template. This uses a legacy template compatible with Apple Wallet. After creating the target, you can remove all generated files except for the `info.plist`.
 
-2.  In the target's `Info.plist`, find the `NSExtension` dictionary and set the following values:
+2.  Create a `WalletNonUIExtensionHandler` class that is a subclass of `PKIssuerProvisioningExtensionHandler` and conforms to `ExtensionProvisioningServiceDelegate`. The class name in your code **must** match the `NSExtensionPrincipalClass` in the `info.plist`.
+
+3.  In the target's `Info.plist`, find the `NSExtension` dictionary and set the following values:
 
     |Key|Type|Value|
     |---|---|---|
     | `NSExtensionPointIdentifier` | String | **com.apple.PassKit.issuer-provisioning** |
-    | `NSExtensionPrincipalClass` | String | **$(PRODUCT\_MODULE\_NAME).WalletExtensionHandler** |
+    | `NSExtensionPrincipalClass` | String | **$(PRODUCT\_MODULE\_NAME).WalletNonUIExtensionHandler** |
 
-3.  Create an `WalletExtensionHandler` class that is a subclass of `PKIssuerProvisioningExtensionHandler`.
+4. Make sure to add `In-App Provisioning` entitlement either manually to the target's entitlements file or via Xcode's UI.
 
 
 ```swift
 import PassKit
 
-class WalletExtensionHandler: PKIssuerProvisioningExtensionHandler {
+class WalletNonUIExtensionHandler: PKIssuerProvisioningExtensionHandler, ExtensionProvisioningServiceDelegate {
+    // Implement the required methods
+    // Refer to the example app for implementation details
 }
 ```
 
@@ -179,7 +190,7 @@ class WalletExtensionHandler: PKIssuerProvisioningExtensionHandler {
 
 The Apple Wallet can use an extension from your app to authenticate the cardholder before provisioning.
 
-1.  Add another **Target** to your Xcode project for the UI extension. In its `Info.plist`, set the following values in the `NSExtension` dictionary:
+1.  Add another **Target** to your Xcode project for the UI extension. Repeat the process using the **Action Extension** template for the UI component. In its `Info.plist`, set the following values in the `NSExtension` dictionary:
 
     |Key|Type|Value|
     |---|---|---|
@@ -202,20 +213,45 @@ import AdyenApplePayExtensionProvisioning
 let provisioningService = try ExtensionProvisioningService(sdkInput: sdkInput)
 
 // For multiple payment instruments:
-let provisioningService = try ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ..])
+let provisioningService = try ExtensionProvisioningService(sdkInputs: [sdkInput1, sdkInput2, ...])
 ```
 
-3.  Implement the `status()` method by calling `extensionStatus()` on the SDK. Use the `requiresAuthentication` parameter if you provide a UI extension.
+3. Implement the `status()` method by calling `extensionStatus()` on the SDK. The `status()` method determines whether your app appears in the **From Apps on Your iPhone** section of the Wallet app.
+
+> [!IMPORTANT]
+> This method has a strict **100ms execution limit**. You must use cached data here, as network requests will exceed this limit.
+
+Use the `requiresAuthentication` parameter if you have implemented a UI extension to authenticate the cardholder.
 
 ```swift
-func status() async -> PKIssuerProvisioningExtensionStatus {
-    // Initialize the service from a cached sdkInput
-    // ...
+override open func status() async -> PKIssuerProvisioningExtensionStatus {
+    // Attempt to initialize the service using cached data only
+    guard let service = await provisioningService(retrieveNewData: false) else {
+        return ExtensionProvisioningService.entriesUnavailableExtensionStatus
+    }
 
-    return provisioningService.extensionStatus(requiresAuthentication: true)
+    return service.extensionStatus(requiresAuthentication: true)
+}
 
-    // If the service could not be initialized from cache:
-    return ExtensionProvisioningService.entriesUnavailableExtensionStatus
+/// Helper to initialize the service, optionally fetching fresh data from the network.
+/// The `WalletNonUIExtensionHandler` is re-instantiated for each method call, so you must re-initialize the SDK each time.
+private func provisioningService(retrieveNewData: Bool) async -> ExtensionProvisioningService? {
+    // Retrieve the previously saved/cached data
+    guard let cachedData = try? YourCustomActivationDataCache().retrieve() else { return nil }
+
+    // For time-sensitive calls (status()), return immediately using cache
+    guard retrieveNewData else {
+        // Use cached data for time-sensitive calls (e.g., status()).
+        return try? ExtensionProvisioningService(sdkInput: cachedActivationData.sdkInput)
+    }
+
+    // For other calls (passEntries, remotePassEntries, generateAddPaymentPassRequestForPassEntryWithIdentifier), fetch fresh data and update cache
+    guard let freshData = try? await yourNetworkManager.fetchFreshInput(id: cachedData.id) else {
+        return nil 
+    }
+    
+    try? YourCustomActivationDataCache().store(freshData)
+    return try? ExtensionProvisioningService(sdkInput: freshData.sdkInput)
 }
 ```
 
@@ -237,11 +273,19 @@ func cardArt(paymentInstrumentId: String) -> CGImage {
 
 ```swift
 func passEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
-    return await provisioningService.passEntries(withDelegate: self)
+    guard let provisioningService = await provisioningService(retrieveNewData: true) else {
+        return []
+    }
+
+    return provisioningService.passEntries(withDelegate: self)
 }
 
 func remotePassEntries() async -> [PKIssuerProvisioningExtensionPassEntry] {
-    return await provisioningService.remotePassEntries(withDelegate: self)
+    guard let provisioningService = await provisioningService(retrieveNewData: true) else {
+        return []
+    }
+
+    return provisioningService.passEntries(withDelegate: self)
 }
 ```
 
@@ -257,16 +301,13 @@ To provision the card when the extension requests it:
 func provision(paymentInstrumentId: String, sdkOutput: Data) async -> Data? {
     // Make a network call to your backend with the sdkOutput
     // and return the new sdkInput from the response.
-    // This logic is identical to the in-app provisioning flow.
+    // This logic is identical to the In-App provisioning flow.
 }
 ```
 
 ### Generate a request to add a payment pass
 
-The `WalletExtensionHandler` is re-instantiated for each method call, so you must re-initialize the SDK each time.
-
-1.  Re-initialize the `ExtensionProvisioningService` by fetching fresh `sdkInput` data, as described in the earlier steps.
-2.  Implement the `generateAddPaymentPassRequestForPassEntryWithIdentifier(...)` method by calling the corresponding method on the SDK. Pass your delegate to handle the provisioning call.
+Implement the `generateAddPaymentPassRequestForPassEntryWithIdentifier(...)` method by calling the corresponding method on the SDK. Pass your delegate to handle the provisioning call.
 
 ```swift
 func generateAddPaymentPassRequestForPassEntryWithIdentifier(
@@ -276,7 +317,9 @@ func generateAddPaymentPassRequestForPassEntryWithIdentifier(
     nonce: Data,
     nonceSignature: Data
 ) async -> PKAddPaymentPassRequest? {
-    // Re-initialize provisioningService here...
+    guard let provisioningService = await provisioningService(retrieveNewData: true) else {
+        return nil
+    }
     
     return try? await provisioningService.generateAddPaymentPassRequestForPassEntryWithIdentifier(
         identifier,
