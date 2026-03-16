@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AdyenApplePayProvisioning-Swift.h</key>
 		<data>
-		LkSjfkWEGWGn+v7X8F7CwGb6cXg=
+		TqbexNacqgzWm0st4CLW7hvM4fc=
 		</data>
 		<key>Headers/AdyenApplePayProvisioning.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6udL0OVOQi7fIW8vYU+yopug670=
+		FD8KlnxbOhB2Vz86OcNLHSGHxIU=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		YLMWLJCL084kteKXOFJm5IX3ovY=
+		036mUU5R0elJUZBuOtX8l59J6vI=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Ye6/VbnHLxm1NueoKyisANAPBoI=
+		RANf3CrNbnWSqjcDTX88MTWC/Sc=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		DBMcc5Pp2K1fydJk/dOlx3U06wc=
+		qSC+eedCyd7trMrThMMPdOItl8A=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Ye6/VbnHLxm1NueoKyisANAPBoI=
+		RANf3CrNbnWSqjcDTX88MTWC/Sc=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Iq7ocE1SD8UVxVkhtS7PQ5VUD1c=
+		Ik4HXwa2P8aKArG8tYU/jiKckW0=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		YLMWLJCL084kteKXOFJm5IX3ovY=
+		036mUU5R0elJUZBuOtX8l59J6vI=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SZ0wN+v7nWKBd8WT9lXwZohqUVY=
+		tkTtUQ/x76Qm6uGpKadun0z+39M=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qwUFVjelESt/0s0rp+4Pb+1wLWw=
+		s/L0TFodgiZMYFddjB18xthFqFI=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SZ0wN+v7nWKBd8WT9lXwZohqUVY=
+		tkTtUQ/x76Qm6uGpKadun0z+39M=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hFtfITuuGhiJBPsibAfqCTWg68M=
+		+yQ7v+JWIAVi/hFMzlGRV3/EqXA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,21 +65,13 @@
 	<dict>
 		<key>Headers/AdyenApplePayProvisioning-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LkSjfkWEGWGn+v7X8F7CwGb6cXg=
-			</data>
 			<key>hash2</key>
 			<data>
-			jhOS9kdBkQjJ/BhB5vYY7gg9/o+w2fZTzzKs1icn5yk=
+			XpPPXOGYy5ANJ6Q1S9BKYdmRc8PVZLgdKFa4MCm0cXg=
 			</data>
 		</dict>
 		<key>Headers/AdyenApplePayProvisioning.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Y2FkC05ejIGPTGmDIUtU2XL9CAQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			zY2CG0nqRk8kjfjxRSFEYjFVJ3+9/ePuTa9VLicI2A4=
@@ -87,120 +79,76 @@
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YLMWLJCL084kteKXOFJm5IX3ovY=
-			</data>
 			<key>hash2</key>
 			<data>
-			SI17d3HD++l3G0bhA1IolVbKhhX0sbrZjGuqmz1XgqU=
+			GnPEfJrJUcTA3HeZc9GkYo295xt/aphOSIdUK/0tsoY=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Ye6/VbnHLxm1NueoKyisANAPBoI=
-			</data>
 			<key>hash2</key>
 			<data>
-			Ep+9M1zVaHRGj6zIjUcingjSA+kaRDYpdZc1JqjElKU=
+			1CApD2LH5iiGzCN04JZ7nI4heidGfl0GAuWAMRlhIWY=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DBMcc5Pp2K1fydJk/dOlx3U06wc=
-			</data>
 			<key>hash2</key>
 			<data>
-			X3//nhFsKDT9+ruqBCZOJ45viBCNoZflnZ8RAbbV920=
+			T6uF4HSUf4Z99U2ncOiICBNjaOa1Lhcwix/1cxTZH34=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Ye6/VbnHLxm1NueoKyisANAPBoI=
-			</data>
 			<key>hash2</key>
 			<data>
-			Ep+9M1zVaHRGj6zIjUcingjSA+kaRDYpdZc1JqjElKU=
+			1CApD2LH5iiGzCN04JZ7nI4heidGfl0GAuWAMRlhIWY=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Iq7ocE1SD8UVxVkhtS7PQ5VUD1c=
-			</data>
 			<key>hash2</key>
 			<data>
-			cQlLLasW18mk7NcfPku3qgUXyuhZT0mNZjbcg8Sxi6U=
+			TU+Foe6Z+YeiVVQPLM/TkPjJV52yb03wiQBsSQnQbAY=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YLMWLJCL084kteKXOFJm5IX3ovY=
-			</data>
 			<key>hash2</key>
 			<data>
-			SI17d3HD++l3G0bhA1IolVbKhhX0sbrZjGuqmz1XgqU=
+			GnPEfJrJUcTA3HeZc9GkYo295xt/aphOSIdUK/0tsoY=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SZ0wN+v7nWKBd8WT9lXwZohqUVY=
-			</data>
 			<key>hash2</key>
 			<data>
-			AYiTxTSDvp4kwSsVElCYdhR1y1fFJrvYSLNKcgFWTAI=
+			YibY4wc/+lY0CFpYEm/BxJpzGYfWpICngKdsP1hkQsI=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			qwUFVjelESt/0s0rp+4Pb+1wLWw=
-			</data>
 			<key>hash2</key>
 			<data>
-			g19mYMOH21B7t2fYot/BGiOlDhSzpE2w9uuNGhmNt2o=
+			wOfrKIfE6nzGJa191J0elaa5Q1fGHzHXp+dr1DIoJfQ=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SZ0wN+v7nWKBd8WT9lXwZohqUVY=
-			</data>
 			<key>hash2</key>
 			<data>
-			AYiTxTSDvp4kwSsVElCYdhR1y1fFJrvYSLNKcgFWTAI=
+			YibY4wc/+lY0CFpYEm/BxJpzGYfWpICngKdsP1hkQsI=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hFtfITuuGhiJBPsibAfqCTWg68M=
-			</data>
 			<key>hash2</key>
 			<data>
-			U9vGmb0xXLE8f4ZVQqUCHwg6BHDqdimnPAlTMsRtpuk=
+			+t3USsZEm2J6RWZXfsbAS+fKLfGkrtC9jEGh8GJpR/I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0ZixTEINsvlft3+qXwnh35GCkzQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			30+Y0bKvqRXWne03h8XycUX9atSjd6J8VRGZ56aaZ7w=

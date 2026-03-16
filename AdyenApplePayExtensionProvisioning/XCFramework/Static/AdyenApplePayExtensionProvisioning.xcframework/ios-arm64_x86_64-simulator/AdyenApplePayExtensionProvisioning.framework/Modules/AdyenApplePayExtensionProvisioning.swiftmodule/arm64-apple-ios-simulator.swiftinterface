@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AdyenApplePayExtensionProvisioning
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 @_exported import AdyenApplePayExtensionProvisioning
 import Foundation
 import PassKit
@@ -12,16 +12,20 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol ExtensionProvisioningServiceDelegate : AnyObject {
   func cardArt(paymentInstrumentId: Swift.String) -> CoreGraphics.CGImage
+  #if compiler(>=5.3) && $NonescapableTypes
   func provision(paymentInstrumentId: Swift.String, sdkOutput: Foundation.Data) async -> Foundation.Data?
+  #endif
 }
 public enum ExtensionProvisioningServiceError : Foundation.LocalizedError {
   case invalidSDKInput
   case emptySDKInputs
   case unableToConstructSDKOutput
   case applePayNotSupported
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public static func == (a: AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError, b: AdyenApplePayExtensionProvisioning.ExtensionProvisioningServiceError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -35,6 +39,10 @@ public enum ExtensionProvisioningServiceError : Foundation.LocalizedError {
   public func extensionStatus(requiresAuthentication: Swift.Bool) -> PassKit.PKIssuerProvisioningExtensionStatus
   @available(iOS 14, *)
   public static var entriesUnavailableExtensionStatus: PassKit.PKIssuerProvisioningExtensionStatus {
+    get
+  }
+  @available(iOS 14, *)
+  public static var entriesAvailableExtensionStatus: PassKit.PKIssuerProvisioningExtensionStatus {
     get
   }
   @available(iOS 14, *)

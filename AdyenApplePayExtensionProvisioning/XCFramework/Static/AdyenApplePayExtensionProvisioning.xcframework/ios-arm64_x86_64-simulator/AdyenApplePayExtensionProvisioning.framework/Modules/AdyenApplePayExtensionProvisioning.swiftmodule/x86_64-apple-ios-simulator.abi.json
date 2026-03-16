@@ -551,6 +551,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -697,6 +704,55 @@
                 "declKind": "Accessor",
                 "usr": "s:34AdyenApplePayExtensionProvisioning0dE7ServiceC018entriesUnavailableD6StatusSo08PKIssueredI0CvgZ",
                 "mangledName": "$s34AdyenApplePayExtensionProvisioning0dE7ServiceC018entriesUnavailableD6StatusSo08PKIssueredI0CvgZ",
+                "moduleName": "AdyenApplePayExtensionProvisioning",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "entriesAvailableExtensionStatus",
+            "printedName": "entriesAvailableExtensionStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PKIssuerProvisioningExtensionStatus",
+                "printedName": "PassKit.PKIssuerProvisioningExtensionStatus",
+                "usr": "c:objc(cs)PKIssuerProvisioningExtensionStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:34AdyenApplePayExtensionProvisioning0dE7ServiceC016entriesAvailableD6StatusSo08PKIssueredI0CvpZ",
+            "mangledName": "$s34AdyenApplePayExtensionProvisioning0dE7ServiceC016entriesAvailableD6StatusSo08PKIssueredI0CvpZ",
+            "moduleName": "AdyenApplePayExtensionProvisioning",
+            "static": true,
+            "intro_iOS": "14",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PKIssuerProvisioningExtensionStatus",
+                    "printedName": "PassKit.PKIssuerProvisioningExtensionStatus",
+                    "usr": "c:objc(cs)PKIssuerProvisioningExtensionStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:34AdyenApplePayExtensionProvisioning0dE7ServiceC016entriesAvailableD6StatusSo08PKIssueredI0CvgZ",
+                "mangledName": "$s34AdyenApplePayExtensionProvisioning0dE7ServiceC016entriesAvailableD6StatusSo08PKIssueredI0CvgZ",
                 "moduleName": "AdyenApplePayExtensionProvisioning",
                 "static": true,
                 "declAttributes": [
@@ -1057,14 +1113,14 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ciadm\/builds\/t1_PRcR-\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/glrtr-Gs\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 483,
       "length": 10,
       "value": "\"applePay\""
     },
     {
-      "filePath": "\/Users\/ciadm\/builds\/t1_PRcR-\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
+      "filePath": "\/Users\/ciadm\/builds\/glrtr-Gs\/0\/mobile\/ios\/adyen-apple-pay-provisioning-ios\/AdyenApplePayProvisioningShared\/ProvisioningServiceShared.swift",
       "kind": "StringLiteral",
       "offset": 736,
       "length": 10,

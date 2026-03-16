@@ -6,11 +6,11 @@
 	<dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/AdyenApplePayExtensionProvisioning</key>
 		<data>
-		FnChYHWzLUymVtVbrzjo0ttazfg=
+		2RH0ZbcUzBWmOHF/NovnvFjw/uI=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning-Swift.h</key>
 		<data>
-		SaR+rYdUhfyeRE8V8ZYbzBZzxb4=
+		wV5Dx0YEPVqDgJJxoMWRnECxkm0=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning.h</key>
 		<data>
@@ -18,23 +18,23 @@
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Info.plist</key>
 		<data>
-		C51dQMMmVyX55PEvm6JT8WfKZQ4=
+		dFK+Kj6dytH1KPMz+Iy4brR1NOQ=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
+		Q7whsfvTfYESjZQsGpw5C3v+YyA=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		QG+eAMWgnCk3UqKkiVhkjPBnljE=
+		OfganjkjiSbmXA74jfqk/4KnqYY=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		6nE8GO01+PkaRS/uCSFpTJ6lh/E=
+		JXnf6Iqnks+LRjw/ove+TylUTVU=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		QG+eAMWgnCk3UqKkiVhkjPBnljE=
+		OfganjkjiSbmXA74jfqk/4KnqYY=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/module.modulemap</key>
 		<data>
@@ -42,31 +42,27 @@
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		tRpnkWvx5abkNGVduiiesNow5Bs=
+		JcTLi33tBMGlbjbSb3md6yzF4ao=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements</key>
 		<data>
 		RLMIKxZwVGsaJ1syhxycFxbU+RU=
 		</data>
-		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		r3DebXIV+GqayX5yByOFw7yRZaI=
-		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeResources</key>
 		<data>
-		na2L3ocSd0vLKfYvUQDvami+V6o=
+		5feRx0C/J2mv09/cc3jyDKcFppI=
 		</data>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeSignature</key>
 		<data>
-		poO4yETEYGnL2xsySpBZEL9ADLQ=
+		Tf+RiSuSMnG/ThiFfPkykwqsvtI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/AdyenApplePayExtensionProvisioning</key>
 		<data>
-		WZP9lr1N8SRWetfJiFVGuoiq96s=
+		OJqbGTS5GF5ihchlOtO1Q/LbFC8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning-Swift.h</key>
 		<data>
-		tT+XvI/L8R00wIUrvb6uHySuZgI=
+		VKLdOtkhGW2wEk9PEsdKTSQ4l70=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning.h</key>
 		<data>
@@ -74,39 +70,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Info.plist</key>
 		<data>
-		lB5cuFjWBCZZQYqb4+ESmrVH6bU=
+		01oIXDNV8NbeS/MbnOsiM9PidcE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
+		Q7whsfvTfYESjZQsGpw5C3v+YyA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		DlK01Xi9+P91mmuOKlIsVixZKhs=
+		a7eBfMESNGBrOqBOT1HLuPdBGt0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RSebEtR8G5Io+d6CIggU6hVvhXk=
+		tZcPfWz6NhnI6Ja6rQwEj0xOunk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DlK01Xi9+P91mmuOKlIsVixZKhs=
+		a7eBfMESNGBrOqBOT1HLuPdBGt0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
+		Q7whsfvTfYESjZQsGpw5C3v+YyA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2P2SOk8swoNjq0DxoODbVGIZrtA=
+		iJMMcZlqTjANmWNWd+D72thNxoM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1ZK2x6xz0Lw2JiUou1RERA7NvkY=
+		NtukVVYord3RRpwDLOsLVnHo06w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2P2SOk8swoNjq0DxoODbVGIZrtA=
+		iJMMcZlqTjANmWNWd+D72thNxoM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/module.modulemap</key>
 		<data>
@@ -114,55 +110,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		ql2AIF7/Mkw2Hdrv1FyaYRcZS/Y=
+		P0Hj0faS6wgeMMgkgC5tHfLoO0o=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements</key>
 		<data>
 		RLMIKxZwVGsaJ1syhxycFxbU+RU=
 		</data>
-		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		Dprtg4SmQv8pdH0yX45BO82TfPA=
-		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeResources</key>
 		<data>
-		TtTRlJlSFJTMNxb9z/uxhR2e9I8=
+		68v4WMKbJkh8ugq3h7xFDJaONrk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeSignature</key>
 		<data>
-		F/wddOraXuMmtVvjwvDcMGZqDbY=
+		mOucMi6KNCTQ9B6D4G/xBKurw98=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/AdyenApplePayExtensionProvisioning</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FnChYHWzLUymVtVbrzjo0ttazfg=
-			</data>
 			<key>hash2</key>
 			<data>
-			i2uwCa9smD3iLt1kX4QU1P0upFCc8UeT71K3CwuyknQ=
+			32+gFtXOFpi79qt/FlEF7FARgQzawjHaTT483LFAYxk=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SaR+rYdUhfyeRE8V8ZYbzBZzxb4=
-			</data>
 			<key>hash2</key>
 			<data>
-			Z2jA7wISQZJ9lCZjx+kcIBMPO4caaQpF3VP+GbF6PRw=
+			FVs37H1tYqOXPNNhDQ2vxE8dccwLNujhWDvF9dY1KyY=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MXbISLWJIPEj029RwSa/u/vn2wo=
-			</data>
 			<key>hash2</key>
 			<data>
 			ea7z5oi+DW/QVbE2iu9rcoUi0PDKYb/Q3YgxuTm9pCs=
@@ -170,65 +150,41 @@
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			C51dQMMmVyX55PEvm6JT8WfKZQ4=
-			</data>
 			<key>hash2</key>
 			<data>
-			G8HdFzEPrsMkn2Eaoe6hN1RzBmfS75LrLj24RfOHivs=
+			Ip4ltFYiMdmxm00s6m6BGK/YFuAQ2y5qS+WYbgp6TNg=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
-			</data>
 			<key>hash2</key>
 			<data>
-			EYgs5bmHx9tMTKH7KfSW+gdh8F7fgxWWXeEFMzJEV9k=
+			lr7BwIENXAMw2ijnMNcx7tNMga/pLrcq5f+GaQt/fj4=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QG+eAMWgnCk3UqKkiVhkjPBnljE=
-			</data>
 			<key>hash2</key>
 			<data>
-			lL+JXvt9/PvAES1oSqsQPe3jnKOsHreAQW1yOhLrAVo=
+			dcyi6wqG2EnZUOyUmL/QY7QBZl3CvmCEJENan2BFV+k=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6nE8GO01+PkaRS/uCSFpTJ6lh/E=
-			</data>
 			<key>hash2</key>
 			<data>
-			yiIeEklg97do0FolVUj5x8brryK3d4Y/n8AOl8hKJt4=
+			uo677mubvBkEaOkAO0BgjaHN3xbDcpa22K/cp090Uoc=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QG+eAMWgnCk3UqKkiVhkjPBnljE=
-			</data>
 			<key>hash2</key>
 			<data>
-			lL+JXvt9/PvAES1oSqsQPe3jnKOsHreAQW1yOhLrAVo=
+			dcyi6wqG2EnZUOyUmL/QY7QBZl3CvmCEJENan2BFV+k=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wh7UELBLEs6mMAP0k7IFPqdGMsg=
-			</data>
 			<key>hash2</key>
 			<data>
 			ktrp39QuP5gB2hEG606HCAI/czXB1q+TAQ9q04GaUN8=
@@ -236,87 +192,48 @@
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tRpnkWvx5abkNGVduiiesNow5Bs=
-			</data>
 			<key>hash2</key>
 			<data>
-			9nhgCbPjYUFuVb/hriG+r+pNNpynFGf6SwSqbOqMq7c=
+			YPHCt1ycQhZUv2xiOYaarH3yoduiYrj0rSFUtGRfLuw=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RLMIKxZwVGsaJ1syhxycFxbU+RU=
-			</data>
 			<key>hash2</key>
 			<data>
 			pydSGF4EOobDrSB1iOFENd+BSjDIlnu5VfJ8k/pIUjw=
 			</data>
 		</dict>
-		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			r3DebXIV+GqayX5yByOFw7yRZaI=
-			</data>
-			<key>hash2</key>
-			<data>
-			4D22jQtxTd49GhBFGOZnT4AzzkTxSXQ4TTu8arupDUM=
-			</data>
-		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			na2L3ocSd0vLKfYvUQDvami+V6o=
-			</data>
 			<key>hash2</key>
 			<data>
-			s2b3UohMrkIU1c43/IkVEgOWptLeuCPirgQEuXq9zU0=
+			DfU9WovDUu09pGaKx9fQXYpx4CPG8kV/aqgRiSi2qwU=
 			</data>
 		</dict>
 		<key>ios-arm64/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeSignature</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			poO4yETEYGnL2xsySpBZEL9ADLQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			hgv5iomC5XDyRwj6AjkOHXdGuceSIMKrptwB+ldgLwQ=
+			hw/R0du4rVo8keOSaLLJAz7APVirz2WKXpMJpJBH7RY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/AdyenApplePayExtensionProvisioning</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WZP9lr1N8SRWetfJiFVGuoiq96s=
-			</data>
 			<key>hash2</key>
 			<data>
-			g/Toh/jknaU2xXdGqAzPgHjsbycRayoQwY9W/FRSbsU=
+			qnAisFsI1svjrDBL9RPoQshvR2Ar4lyLfOr83ocyxEY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tT+XvI/L8R00wIUrvb6uHySuZgI=
-			</data>
 			<key>hash2</key>
 			<data>
-			gd/6yMOYeXnxHiiOKUUGIxdvRKdNrbuEIkkDPNJFTvg=
+			42C0/QGKGul4rJ/pxlTK6rQaKlLPIevPnqatxdQXWuw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Headers/AdyenApplePayExtensionProvisioning.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MXbISLWJIPEj029RwSa/u/vn2wo=
-			</data>
 			<key>hash2</key>
 			<data>
 			ea7z5oi+DW/QVbE2iu9rcoUi0PDKYb/Q3YgxuTm9pCs=
@@ -324,109 +241,69 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lB5cuFjWBCZZQYqb4+ESmrVH6bU=
-			</data>
 			<key>hash2</key>
 			<data>
-			GDf1nnMy4UVvJcpVKtqsPr2dp0Cq0A0EbVHOLJ8yDfY=
+			Dy1lN4X0/o9bX72b9WVEc4rINkiuIHTe5dNhraNh14M=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
-			</data>
 			<key>hash2</key>
 			<data>
-			EYgs5bmHx9tMTKH7KfSW+gdh8F7fgxWWXeEFMzJEV9k=
+			lr7BwIENXAMw2ijnMNcx7tNMga/pLrcq5f+GaQt/fj4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DlK01Xi9+P91mmuOKlIsVixZKhs=
-			</data>
 			<key>hash2</key>
 			<data>
-			tcK0KNjWUOx4SRZbqVOQi/OcGG7Dj5rsgwlkc/f1yxY=
+			i/xI7SH46HWv/J8sJl8ym+5MNJN1+Qy0O/Aik2GMX/E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RSebEtR8G5Io+d6CIggU6hVvhXk=
-			</data>
 			<key>hash2</key>
 			<data>
-			IzNwdMiURS7gagr02Fb9GeyKPzZDc3CLYbWojeDZS9M=
+			e3Gl0QAXTFSI7rhmjeg303cJrCdlfxn+F0uBCwztctg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DlK01Xi9+P91mmuOKlIsVixZKhs=
-			</data>
 			<key>hash2</key>
 			<data>
-			tcK0KNjWUOx4SRZbqVOQi/OcGG7Dj5rsgwlkc/f1yxY=
+			i/xI7SH46HWv/J8sJl8ym+5MNJN1+Qy0O/Aik2GMX/E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			oSA0+7ZZ1KhX8fzqzpO9AOzBF1M=
-			</data>
 			<key>hash2</key>
 			<data>
-			EYgs5bmHx9tMTKH7KfSW+gdh8F7fgxWWXeEFMzJEV9k=
+			lr7BwIENXAMw2ijnMNcx7tNMga/pLrcq5f+GaQt/fj4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2P2SOk8swoNjq0DxoODbVGIZrtA=
-			</data>
 			<key>hash2</key>
 			<data>
-			1TOaG9G8+KkgbrJnA/D/d0EW2gJul36Gg8BJl91EwrI=
+			MUevC7i1qux6Hj5jIKpCme4T0UMjv8OeQUWyniQq7VM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1ZK2x6xz0Lw2JiUou1RERA7NvkY=
-			</data>
 			<key>hash2</key>
 			<data>
-			QFcI5ITWYP/+xJDYMeEkjXctfVr5rsptaZAgE/qKJBI=
+			kClE6GvgqCUSNxXnDGf+E5cOYww5buR7BJiJaMKfuZ8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/AdyenApplePayExtensionProvisioning.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2P2SOk8swoNjq0DxoODbVGIZrtA=
-			</data>
 			<key>hash2</key>
 			<data>
-			1TOaG9G8+KkgbrJnA/D/d0EW2gJul36Gg8BJl91EwrI=
+			MUevC7i1qux6Hj5jIKpCme4T0UMjv8OeQUWyniQq7VM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wh7UELBLEs6mMAP0k7IFPqdGMsg=
-			</data>
 			<key>hash2</key>
 			<data>
 			ktrp39QuP5gB2hEG606HCAI/czXB1q+TAQ9q04GaUN8=
@@ -434,57 +311,30 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ql2AIF7/Mkw2Hdrv1FyaYRcZS/Y=
-			</data>
 			<key>hash2</key>
 			<data>
-			+LBKCYcQuekpgBTV34kEIfzhcL9cCRWPJeKzCJD9yi4=
+			XgbcaDxThHTTndNxmGSMSLA+GGw2j+7RcD2sKzgN6/k=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RLMIKxZwVGsaJ1syhxycFxbU+RU=
-			</data>
 			<key>hash2</key>
 			<data>
 			pydSGF4EOobDrSB1iOFENd+BSjDIlnu5VfJ8k/pIUjw=
 			</data>
 		</dict>
-		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Dprtg4SmQv8pdH0yX45BO82TfPA=
-			</data>
-			<key>hash2</key>
-			<data>
-			l3/drrlbeaPfsV+RmpJKuD28Qid7/e2E8GAAol0YZV8=
-			</data>
-		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			TtTRlJlSFJTMNxb9z/uxhR2e9I8=
-			</data>
 			<key>hash2</key>
 			<data>
-			7jHd9ycsrfxrTt/0mTcd5KA8fkO2mVEPpLf9CtA60a8=
+			RR61gM0UHd6IJCqDJFEGKQIWprNBwSW/O/PSTKymjnY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AdyenApplePayExtensionProvisioning.framework/_CodeSignature/CodeSignature</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			F/wddOraXuMmtVvjwvDcMGZqDbY=
-			</data>
 			<key>hash2</key>
 			<data>
-			UA4s5vdIKx7A1WHVENL6f8rzdPuS3VDh0+uE/oW50VQ=
+			7PNa5AkLrinjnNNhHL/VPk+slXYThJJQYG7ydctCNXo=
 			</data>
 		</dict>
 	</dict>

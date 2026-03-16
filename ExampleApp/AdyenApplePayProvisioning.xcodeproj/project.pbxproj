@@ -1,0 +1,1149 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		863487A82F573ADD00FEE64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863487A52F573ADD00FEE64B /* Assets.xcassets */; };
+		863487A92F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487A42F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift */; };
+		863487AD2F587DC400FEE64B /* ActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487AC2F587DC400FEE64B /* ActivationData.swift */; };
+		863487AF2F587DF400FEE64B /* ProvisioningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487AE2F587DF400FEE64B /* ProvisioningData.swift */; };
+		863487B12F587E4600FEE64B /* ProvisioningDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487B02F587E4600FEE64B /* ProvisioningDataRequest.swift */; };
+		863487B72F587FCB00FEE64B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487B62F587FCB00FEE64B /* ViewModel.swift */; };
+		863487B92F58803200FEE64B /* ViewModel+AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487B82F58803200FEE64B /* ViewModel+AppState.swift */; };
+		863487BC2F5880E200FEE64B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487BB2F5880E200FEE64B /* NetworkManager.swift */; };
+		863487BF2F58816C00FEE64B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487BE2F58816C00FEE64B /* AppError.swift */; };
+		863487C92F597E9000FEE64B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C62F597E9000FEE64B /* CardView.swift */; };
+		863487CA2F597E9000FEE64B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C82F597E9000FEE64B /* SignInView.swift */; };
+		863487CB2F597E9000FEE64B /* AddPassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C42F597E9000FEE64B /* AddPassButton.swift */; };
+		863487CC2F597E9000FEE64B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C72F597E9000FEE64B /* ContentView.swift */; };
+		863487CD2F597E9000FEE64B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C32F597E9000FEE64B /* AccountView.swift */; };
+		863487CE2F597E9000FEE64B /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C52F597E9000FEE64B /* BannerView.swift */; };
+		863487D52F59808200FEE64B /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D02F59808200FEE64B /* MockProvider.swift */; };
+		863487D62F59808200FEE64B /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D32F59808200FEE64B /* URLSessionConfiguration+Mock.swift */; };
+		863487D72F59808200FEE64B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D12F59808200FEE64B /* MockURLProtocol.swift */; };
+		863487D92F59808200FEE64B /* MockURLProtocol+HandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D22F59808200FEE64B /* MockURLProtocol+HandleRequest.swift */; };
+		863487DB2F59847A00FEE64B /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487DA2F59847A00FEE64B /* ApiEndpoints.swift */; };
+		863487DD2F59872700FEE64B /* ApiEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487DC2F59872700FEE64B /* ApiEnvironment.swift */; };
+		863487E92F59C8FE00FEE64B /* HeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487E82F59C8FE00FEE64B /* HeaderProvider.swift */; };
+		8680F9AE2F5B09F90020CD9E /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8680F9802F5B08DD0020CD9E /* UniformTypeIdentifiers.framework */; };
+		8680F9D52F5B0C9E0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9CB2F5B0C5D0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift */; };
+		8680F9D62F5B0CA50020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9D02F5B0C640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift */; };
+		8680F9D92F5B0CE90020CD9E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487BB2F5880E200FEE64B /* NetworkManager.swift */; };
+		8680F9DA2F5B0CEF0020CD9E /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487DA2F59847A00FEE64B /* ApiEndpoints.swift */; };
+		8680F9DB2F5B0CF40020CD9E /* ApiEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487DC2F59872700FEE64B /* ApiEnvironment.swift */; };
+		8680F9DC2F5B0CFA0020CD9E /* HeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487E82F59C8FE00FEE64B /* HeaderProvider.swift */; };
+		8680F9DD2F5B0D000020CD9E /* ActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487AC2F587DC400FEE64B /* ActivationData.swift */; };
+		8680F9DE2F5B0D060020CD9E /* ProvisioningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487AE2F587DF400FEE64B /* ProvisioningData.swift */; };
+		8680F9DF2F5B0D0B0020CD9E /* ProvisioningDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487B02F587E4600FEE64B /* ProvisioningDataRequest.swift */; };
+		8680F9E02F5B0D130020CD9E /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D02F59808200FEE64B /* MockProvider.swift */; };
+		8680F9E12F5B0D1A0020CD9E /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D12F59808200FEE64B /* MockURLProtocol.swift */; };
+		8680F9E22F5B0D200020CD9E /* MockURLProtocol+HandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D22F59808200FEE64B /* MockURLProtocol+HandleRequest.swift */; };
+		8680F9E32F5B0D250020CD9E /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D32F59808200FEE64B /* URLSessionConfiguration+Mock.swift */; };
+		8680F9E42F5B0D2C0020CD9E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487BE2F58816C00FEE64B /* AppError.swift */; };
+		8680F9E52F5B0D380020CD9E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C82F597E9000FEE64B /* SignInView.swift */; };
+		8680F9E62F5B0DB20020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8680F9972F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8680F9E92F5B0DB20020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8680F9AD2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8680F9F62F5B18020020CD9E /* ActivationDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */; };
+		8680F9F72F5B18020020CD9E /* ActivationDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */; };
+		8680F9F92F5F078D0020CD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863487A52F573ADD00FEE64B /* Assets.xcassets */; };
+		8680F9FB2F5F0BB80020CD9E /* MockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FA2F5F0BB80020CD9E /* MockMode.swift */; };
+		8680F9FC2F5F0BB80020CD9E /* MockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FA2F5F0BB80020CD9E /* MockMode.swift */; };
+		869EC89F2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 869EC89E2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning */; };
+		869EC8A12F62E17E009F2BE9 /* AdyenApplePayProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 869EC8A02F62E17E009F2BE9 /* AdyenApplePayProvisioning */; };
+		86A05DB72F601D680016748C /* KeyedActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A05DB62F601D680016748C /* KeyedActivationData.swift */; };
+		86A05DB82F601D680016748C /* KeyedActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A05DB62F601D680016748C /* KeyedActivationData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8680F9E72F5B0DB20020CD9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864882C62AFE59A80089F1A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8680F9962F5B09C40020CD9E;
+			remoteInfo = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+		};
+		8680F9EA2F5B0DB20020CD9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864882C62AFE59A80089F1A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8680F9AC2F5B09F90020CD9E;
+			remoteInfo = AdyenApplePayProvisioningDemoWalletUIExtension;
+		};
+		8680F9F12F5B10170020CD9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864882C62AFE59A80089F1A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 864882EB2AFE5CDF0089F1A3;
+			remoteInfo = AdyenApplePayExtensionProvisioning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		863487E72F59902200FEE64B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9782F5AE4390020CD9E /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9EC2F5B0DB20020CD9E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8680F9E62F5B0DB20020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex in Embed Foundation Extensions */,
+				8680F9E92F5B0DB20020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9F32F5B10170020CD9E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		863487982F573AD000FEE64B /* AdyenApplePayProvisioningDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdyenApplePayProvisioningDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		863487A42F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdyenApplePayProvisioningDemoApp.swift; sourceTree = "<group>"; };
+		863487A52F573ADD00FEE64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		863487AC2F587DC400FEE64B /* ActivationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationData.swift; sourceTree = "<group>"; };
+		863487AE2F587DF400FEE64B /* ProvisioningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningData.swift; sourceTree = "<group>"; };
+		863487B02F587E4600FEE64B /* ProvisioningDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningDataRequest.swift; sourceTree = "<group>"; };
+		863487B62F587FCB00FEE64B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		863487B82F58803200FEE64B /* ViewModel+AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+AppState.swift"; sourceTree = "<group>"; };
+		863487BB2F5880E200FEE64B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		863487BE2F58816C00FEE64B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		863487C32F597E9000FEE64B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		863487C42F597E9000FEE64B /* AddPassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassButton.swift; sourceTree = "<group>"; };
+		863487C52F597E9000FEE64B /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		863487C62F597E9000FEE64B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		863487C72F597E9000FEE64B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		863487C82F597E9000FEE64B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		863487D02F59808200FEE64B /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
+		863487D12F59808200FEE64B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		863487D22F59808200FEE64B /* MockURLProtocol+HandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockURLProtocol+HandleRequest.swift"; sourceTree = "<group>"; };
+		863487D32F59808200FEE64B /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
+		863487DA2F59847A00FEE64B /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		863487DC2F59872700FEE64B /* ApiEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEnvironment.swift; sourceTree = "<group>"; };
+		863487DE2F598A2100FEE64B /* AdyenApplePayProvisioningDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdyenApplePayProvisioningDemo.entitlements; sourceTree = "<group>"; };
+		863487E82F59C8FE00FEE64B /* HeaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderProvider.swift; sourceTree = "<group>"; };
+		8680F9802F5B08DD0020CD9E /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		8680F9972F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AdyenApplePayProvisioningDemoWalletNonUIExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8680F9AD2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AdyenApplePayProvisioningDemoWalletUIExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8680F9CB2F5B0C5D0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdyenApplePayProvisioningDemoWalletNonUIExtension.swift; sourceTree = "<group>"; };
+		8680F9CC2F5B0C5D0020CD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8680F9D02F5B0C640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdyenApplePayProvisioningDemoWalletUIExtension.swift; sourceTree = "<group>"; };
+		8680F9D12F5B0C640020CD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8680F9ED2F5B0F5E0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdyenApplePayProvisioningDemoWalletNonUIExtension.entitlements; sourceTree = "<group>"; };
+		8680F9EE2F5B0F640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdyenApplePayProvisioningDemoWalletUIExtension.entitlements; sourceTree = "<group>"; };
+		8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationDataCache.swift; sourceTree = "<group>"; };
+		8680F9FA2F5F0BB80020CD9E /* MockMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMode.swift; sourceTree = "<group>"; };
+		86A05DB62F601D680016748C /* KeyedActivationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedActivationData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		863487952F573AD000FEE64B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EC8A12F62E17E009F2BE9 /* AdyenApplePayProvisioning in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9942F5B09C40020CD9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869EC89F2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9AA2F5B09F90020CD9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8680F9AE2F5B09F90020CD9E /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		861740322AFE717F002C67FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8680F9802F5B08DD0020CD9E /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		863487A72F573ADD00FEE64B /* AdyenApplePayProvisioningDemo */ = {
+			isa = PBXGroup;
+			children = (
+				863487DE2F598A2100FEE64B /* AdyenApplePayProvisioningDemo.entitlements */,
+				863487A42F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift */,
+				863487A52F573ADD00FEE64B /* Assets.xcassets */,
+				8680F9F42F5B17D40020CD9E /* Cache */,
+				863487BD2F58816000FEE64B /* Error */,
+				863487D42F59808200FEE64B /* Mocks */,
+				863487AB2F587DA900FEE64B /* Models */,
+				863487BA2F5880C100FEE64B /* Networking */,
+				863487B52F587FBA00FEE64B /* ViewModel */,
+				863487C22F597E6A00FEE64B /* Views */,
+			);
+			path = AdyenApplePayProvisioningDemo;
+			sourceTree = "<group>";
+		};
+		863487AB2F587DA900FEE64B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				863487AC2F587DC400FEE64B /* ActivationData.swift */,
+				863487AE2F587DF400FEE64B /* ProvisioningData.swift */,
+				863487B02F587E4600FEE64B /* ProvisioningDataRequest.swift */,
+				86A05DB62F601D680016748C /* KeyedActivationData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		863487B52F587FBA00FEE64B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				863487B62F587FCB00FEE64B /* ViewModel.swift */,
+				863487B82F58803200FEE64B /* ViewModel+AppState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		863487BA2F5880C100FEE64B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				863487BB2F5880E200FEE64B /* NetworkManager.swift */,
+				863487DA2F59847A00FEE64B /* ApiEndpoints.swift */,
+				863487DC2F59872700FEE64B /* ApiEnvironment.swift */,
+				863487E82F59C8FE00FEE64B /* HeaderProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		863487BD2F58816000FEE64B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				863487BE2F58816C00FEE64B /* AppError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		863487C22F597E6A00FEE64B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				863487C32F597E9000FEE64B /* AccountView.swift */,
+				863487C42F597E9000FEE64B /* AddPassButton.swift */,
+				863487C52F597E9000FEE64B /* BannerView.swift */,
+				863487C62F597E9000FEE64B /* CardView.swift */,
+				863487C72F597E9000FEE64B /* ContentView.swift */,
+				863487C82F597E9000FEE64B /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		863487D42F59808200FEE64B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				863487D02F59808200FEE64B /* MockProvider.swift */,
+				863487D12F59808200FEE64B /* MockURLProtocol.swift */,
+				863487D22F59808200FEE64B /* MockURLProtocol+HandleRequest.swift */,
+				863487D32F59808200FEE64B /* URLSessionConfiguration+Mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		864882C52AFE59A80089F1A3 = {
+			isa = PBXGroup;
+			children = (
+				863487A72F573ADD00FEE64B /* AdyenApplePayProvisioningDemo */,
+				8680F9CD2F5B0C5D0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension */,
+				8680F9D22F5B0C640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension */,
+				864882D22AFE5C660089F1A3 /* Products */,
+				861740322AFE717F002C67FC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		864882D22AFE5C660089F1A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				863487982F573AD000FEE64B /* AdyenApplePayProvisioningDemo.app */,
+				8680F9972F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex */,
+				8680F9AD2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8680F9CD2F5B0C5D0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8680F9ED2F5B0F5E0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.entitlements */,
+				8680F9CB2F5B0C5D0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift */,
+				8680F9CC2F5B0C5D0020CD9E /* Info.plist */,
+			);
+			path = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+			sourceTree = "<group>";
+		};
+		8680F9D22F5B0C640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8680F9EE2F5B0F640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.entitlements */,
+				8680F9D02F5B0C640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift */,
+				8680F9D12F5B0C640020CD9E /* Info.plist */,
+			);
+			path = AdyenApplePayProvisioningDemoWalletUIExtension;
+			sourceTree = "<group>";
+		};
+		8680F9F42F5B17D40020CD9E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */,
+				8680F9FA2F5F0BB80020CD9E /* MockMode.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		863487972F573AD000FEE64B /* AdyenApplePayProvisioningDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 863487A02F573AD100FEE64B /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemo" */;
+			buildPhases = (
+				863487942F573AD000FEE64B /* Sources */,
+				863487952F573AD000FEE64B /* Frameworks */,
+				863487962F573AD000FEE64B /* Resources */,
+				863487E72F59902200FEE64B /* Embed Frameworks */,
+				8680F9782F5AE4390020CD9E /* Embed ExtensionKit Extensions */,
+				8680F9EC2F5B0DB20020CD9E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8680F9E82F5B0DB20020CD9E /* PBXTargetDependency */,
+				8680F9EB2F5B0DB20020CD9E /* PBXTargetDependency */,
+			);
+			name = AdyenApplePayProvisioningDemo;
+			packageProductDependencies = (
+				869EC8A02F62E17E009F2BE9 /* AdyenApplePayProvisioning */,
+			);
+			productName = AdyenApplePayProvisioningDemo;
+			productReference = 863487982F573AD000FEE64B /* AdyenApplePayProvisioningDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8680F9962F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8680F9A52F5B09C40020CD9E /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemoWalletNonUIExtension" */;
+			buildPhases = (
+				8680F9932F5B09C40020CD9E /* Sources */,
+				8680F9942F5B09C40020CD9E /* Frameworks */,
+				8680F9952F5B09C40020CD9E /* Resources */,
+				8680F9F32F5B10170020CD9E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8680F9F22F5B10170020CD9E /* PBXTargetDependency */,
+			);
+			name = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+			packageProductDependencies = (
+				869EC89E2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning */,
+			);
+			productName = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+			productReference = 8680F9972F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8680F9AC2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8680F9BC2F5B09F90020CD9E /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemoWalletUIExtension" */;
+			buildPhases = (
+				8680F9A92F5B09F90020CD9E /* Sources */,
+				8680F9AA2F5B09F90020CD9E /* Frameworks */,
+				8680F9AB2F5B09F90020CD9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdyenApplePayProvisioningDemoWalletUIExtension;
+			packageProductDependencies = (
+			);
+			productName = AdyenApplePayProvisioningDemoWalletUIExtension;
+			productReference = 8680F9AD2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		864882C62AFE59A80089F1A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					863487972F573AD000FEE64B = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					8680F9962F5B09C40020CD9E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					8680F9AC2F5B09F90020CD9E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 864882C92AFE59A80089F1A3 /* Build configuration list for PBXProject "AdyenApplePayProvisioning" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 864882C52AFE59A80089F1A3;
+			packageReferences = (
+				869EC89D2F62E17E009F2BE9 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */,
+			);
+			productRefGroup = 864882D22AFE5C660089F1A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				863487972F573AD000FEE64B /* AdyenApplePayProvisioningDemo */,
+				8680F9962F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension */,
+				8680F9AC2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		863487962F573AD000FEE64B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				863487A82F573ADD00FEE64B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9952F5B09C40020CD9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8680F9F92F5F078D0020CD9E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9AB2F5B09F90020CD9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		863487942F573AD000FEE64B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				863487A92F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift in Sources */,
+				863487C92F597E9000FEE64B /* CardView.swift in Sources */,
+				863487CA2F597E9000FEE64B /* SignInView.swift in Sources */,
+				863487CB2F597E9000FEE64B /* AddPassButton.swift in Sources */,
+				863487CC2F597E9000FEE64B /* ContentView.swift in Sources */,
+				863487CD2F597E9000FEE64B /* AccountView.swift in Sources */,
+				8680F9F62F5B18020020CD9E /* ActivationDataCache.swift in Sources */,
+				863487DB2F59847A00FEE64B /* ApiEndpoints.swift in Sources */,
+				863487D52F59808200FEE64B /* MockProvider.swift in Sources */,
+				863487D62F59808200FEE64B /* URLSessionConfiguration+Mock.swift in Sources */,
+				86A05DB72F601D680016748C /* KeyedActivationData.swift in Sources */,
+				8680F9FB2F5F0BB80020CD9E /* MockMode.swift in Sources */,
+				863487D72F59808200FEE64B /* MockURLProtocol.swift in Sources */,
+				863487DD2F59872700FEE64B /* ApiEnvironment.swift in Sources */,
+				863487D92F59808200FEE64B /* MockURLProtocol+HandleRequest.swift in Sources */,
+				863487CE2F597E9000FEE64B /* BannerView.swift in Sources */,
+				863487E92F59C8FE00FEE64B /* HeaderProvider.swift in Sources */,
+				863487BF2F58816C00FEE64B /* AppError.swift in Sources */,
+				863487B92F58803200FEE64B /* ViewModel+AppState.swift in Sources */,
+				863487B12F587E4600FEE64B /* ProvisioningDataRequest.swift in Sources */,
+				863487BC2F5880E200FEE64B /* NetworkManager.swift in Sources */,
+				863487AF2F587DF400FEE64B /* ProvisioningData.swift in Sources */,
+				863487B72F587FCB00FEE64B /* ViewModel.swift in Sources */,
+				863487AD2F587DC400FEE64B /* ActivationData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9932F5B09C40020CD9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8680F9F72F5B18020020CD9E /* ActivationDataCache.swift in Sources */,
+				8680F9D92F5B0CE90020CD9E /* NetworkManager.swift in Sources */,
+				86A05DB82F601D680016748C /* KeyedActivationData.swift in Sources */,
+				8680F9DA2F5B0CEF0020CD9E /* ApiEndpoints.swift in Sources */,
+				8680F9E02F5B0D130020CD9E /* MockProvider.swift in Sources */,
+				8680F9E22F5B0D200020CD9E /* MockURLProtocol+HandleRequest.swift in Sources */,
+				8680F9E42F5B0D2C0020CD9E /* AppError.swift in Sources */,
+				8680F9DF2F5B0D0B0020CD9E /* ProvisioningDataRequest.swift in Sources */,
+				8680F9E32F5B0D250020CD9E /* URLSessionConfiguration+Mock.swift in Sources */,
+				8680F9DB2F5B0CF40020CD9E /* ApiEnvironment.swift in Sources */,
+				8680F9FC2F5F0BB80020CD9E /* MockMode.swift in Sources */,
+				8680F9DE2F5B0D060020CD9E /* ProvisioningData.swift in Sources */,
+				8680F9D52F5B0C9E0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift in Sources */,
+				8680F9E12F5B0D1A0020CD9E /* MockURLProtocol.swift in Sources */,
+				8680F9DC2F5B0CFA0020CD9E /* HeaderProvider.swift in Sources */,
+				8680F9DD2F5B0D000020CD9E /* ActivationData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8680F9A92F5B09F90020CD9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8680F9E52F5B0D380020CD9E /* SignInView.swift in Sources */,
+				8680F9D62F5B0CA50020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8680F9E82F5B0DB20020CD9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8680F9962F5B09C40020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension */;
+			targetProxy = 8680F9E72F5B0DB20020CD9E /* PBXContainerItemProxy */;
+		};
+		8680F9EB2F5B0DB20020CD9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8680F9AC2F5B09F90020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension */;
+			targetProxy = 8680F9EA2F5B0DB20020CD9E /* PBXContainerItemProxy */;
+		};
+		8680F9F22F5B10170020CD9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = 8680F9F12F5B10170020CD9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		863487A12F573AD100FEE64B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemo/AdyenApplePayProvisioningDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		863487A32F573AD100FEE64B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemo/AdyenApplePayProvisioningDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		864882CA2AFE59A80089F1A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MARKETING_VERSION = 2.2.0;
+			};
+			name = Debug;
+		};
+		864882CB2AFE59A80089F1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MARKETING_VERSION = 2.2.0;
+			};
+			name = Release;
+		};
+		8680F9A62F5B09C40020CD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemoWalletNonUIExtension/AdyenApplePayProvisioningDemoWalletNonUIExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdyenApplePayProvisioningDemoWalletNonUIExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo.AdyenApplePayProvisioningDemoWalletNonUIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8680F9A82F5B09C40020CD9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemoWalletNonUIExtension/AdyenApplePayProvisioningDemoWalletNonUIExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdyenApplePayProvisioningDemoWalletNonUIExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdyenApplePayProvisioningDemoWalletNonUIExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo.AdyenApplePayProvisioningDemoWalletNonUIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8680F9BD2F5B09F90020CD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemoWalletUIExtension/AdyenApplePayProvisioningDemoWalletUIExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdyenApplePayProvisioningDemoWalletUIExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdyenApplePayProvisioningDemoWalletUIExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo.AdyenApplePayProvisioningDemoWalletUIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8680F9BF2F5B09F90020CD9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = AdyenApplePayProvisioningDemoWalletUIExtension/AdyenApplePayProvisioningDemoWalletUIExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B2NYSS5932;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdyenApplePayProvisioningDemoWalletUIExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdyenApplePayProvisioningDemoWalletUIExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adyen.adyenApplePayProvisioningDemo.AdyenApplePayProvisioningDemoWalletUIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		863487A02F573AD100FEE64B /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				863487A12F573AD100FEE64B /* Debug */,
+				863487A32F573AD100FEE64B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		864882C92AFE59A80089F1A3 /* Build configuration list for PBXProject "AdyenApplePayProvisioning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864882CA2AFE59A80089F1A3 /* Debug */,
+				864882CB2AFE59A80089F1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8680F9A52F5B09C40020CD9E /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemoWalletNonUIExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8680F9A62F5B09C40020CD9E /* Debug */,
+				8680F9A82F5B09C40020CD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8680F9BC2F5B09F90020CD9E /* Build configuration list for PBXNativeTarget "AdyenApplePayProvisioningDemoWalletUIExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8680F9BD2F5B09F90020CD9E /* Debug */,
+				8680F9BF2F5B09F90020CD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		869EC89D2F62E17E009F2BE9 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Adyen/adyen-apple-pay-provisioning-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		869EC89E2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 869EC89D2F62E17E009F2BE9 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */;
+			productName = AdyenApplePayExtensionProvisioning;
+		};
+		869EC8A02F62E17E009F2BE9 /* AdyenApplePayProvisioning */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 869EC89D2F62E17E009F2BE9 /* XCRemoteSwiftPackageReference "adyen-apple-pay-provisioning-ios" */;
+			productName = AdyenApplePayProvisioning;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 864882C62AFE59A80089F1A3 /* Project object */;
+}

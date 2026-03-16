@@ -37,8 +37,7 @@ provisioningService = try ProvisioningService(sdkInput: sdkInput)
 
 Check if the cardholder can add a payment card to their Apple Wallet on the current device or a paired Apple Watch. If the card cannot be added, it means it's already in the Wallet. However, it's not possible to check the status of a paired watch if it's unavailable. You must determine watch availability using `WCSession` or our provided `WatchAvailability` helper class.
 ```swift
-let watchAvailability = WatchAvailability()
-let isWatchActivated = await watchAvailability.activate()
+let isWatchActivated = await WatchAvailability.activate()
 let state = provisioningService.canAddCardDetails(isWatchActivated: isWatchActivated)
 
 if state.canAddCard {
@@ -109,10 +108,12 @@ In your wallet extension target, create a subclass of `PKIssuerProvisioningExten
 import PassKit
 import AdyenApplePayExtensionProvisioning
 
-class ActionRequestHandler: PKIssuerProvisioningExtensionHandler, ExtensionProvisioningServiceDelegate {
+class WalletExtensionHandler: PKIssuerProvisioningExtensionHandler, ExtensionProvisioningServiceDelegate {
     // Your implementation goes here
 }
 ```
+
+You will find a more extensive extension documentation in the links below.
 
 ### Testing
 
@@ -120,9 +121,9 @@ Card provisioning only works on App Store builds (including TestFlight) with Ady
 
 ## See also
 
- * [Full documentation for this version](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.1.0/Api)
- * [SDK reference Adyen Apple Pay Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.1.0/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning/)
- * [SDK reference Adyen Apple Pay Extension Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.1.0/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning/)
+ * [Full documentation for this version](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.2.0/Api)
+ * [SDK reference Adyen Apple Pay Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.2.0/AdyenApplePayProvisioning/documentation/adyenapplepayprovisioning/)
+ * [SDK reference Adyen Apple Pay Extension Provisioning](https://adyen.github.io/adyen-apple-pay-provisioning-ios/2.2.0/AdyenApplePayExtensionProvisioning/documentation/adyenapplepayextensionprovisioning/)
  * [Data security at Adyen](https://docs.adyen.com/development-resources/adyen-data-security)
 
 ## License
