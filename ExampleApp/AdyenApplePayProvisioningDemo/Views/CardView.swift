@@ -41,14 +41,7 @@ struct CardView: View {
 
     /// The visual representation of the physical or digital card.
     private var cardImage: some View {
-        Image("visa_card")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
-            )
+        CardImageView()
     }
 
     /// A badge indicating that the card is active in the system.

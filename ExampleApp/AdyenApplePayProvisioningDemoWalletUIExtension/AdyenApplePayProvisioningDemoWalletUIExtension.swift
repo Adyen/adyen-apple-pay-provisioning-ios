@@ -17,7 +17,10 @@ class AdyenApplePayProvisioningDemoWalletUIExtension: UIViewController, PKIssuer
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-        let wrapper = SignInViewWrapper { [weak self] authenticated in
+        let wrapper = AuthFlowViewWrapper { [weak self] authenticated in
+            if authenticated {
+                SessionStore().setSignedIn(true)
+            }
             let result: PKIssuerProvisioningExtensionAuthorizationResult = authenticated ? .authorized : .canceled
             self?.completionHandler?(result)
         }
@@ -30,7 +33,10 @@ class AdyenApplePayProvisioningDemoWalletUIExtension: UIViewController, PKIssuer
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        children.first?.view.frame = view.bounds
+        guard let child = children.first else { return }
+        var frame = view.bounds
+        frame.size.height = max(frame.size.height, child.view.frame.height)
+        child.view.frame = frame
     }
 
     @available(*, unavailable)
@@ -41,9 +47,9 @@ class AdyenApplePayProvisioningDemoWalletUIExtension: UIViewController, PKIssuer
     var completionHandler: ((PKIssuerProvisioningExtensionAuthorizationResult) -> Void)?
 }
 
-class SignInViewWrapper: UIHostingController<SignInView> {
+class AuthFlowViewWrapper: UIHostingController<AuthFlowView> {
     init(authenticated: @escaping (Bool) -> Void) {
-        super.init(rootView: SignInView(completion: authenticated))
+        super.init(rootView: AuthFlowView(completion: authenticated))
 
         isModalInPresentation = true // Prevent interactive dismissal
     }

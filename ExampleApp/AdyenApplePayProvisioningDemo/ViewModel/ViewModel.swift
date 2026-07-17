@@ -26,19 +26,19 @@ final class ViewModel {
     // Never use more than one instance of the WatchAvailability at once
     private let watchAvailability = WatchAvailability()
     private var hasLoadedInitialState = false
+    private let sessionStore = SessionStore()
 
     /// Holds a provisioning error to be displayed by the UI.
     var provisioningError: AppError?
 
     init(
-        appState: AppState = .signedOut,
         cardState: CardState = .cannotProvision,
         paymentInstrumentId: String,
         apiEnvironment: ApiEnvironment,
         networkManager: any NetworkManaging,
         activationDataCacheFactory: ActivationDataCacheFactoryProtocol
     ) {
-        self.appState = appState
+        self.appState = sessionStore.isSignedIn ? .signedIn(.home) : .signedOut
         self.cardState = cardState
         self.paymentInstrumentId = paymentInstrumentId
         self.apiEnvironment = apiEnvironment
@@ -111,6 +111,12 @@ final class ViewModel {
         }
     }
 
+    /// Persists the signed-in state and transitions to the home screen.
+    func completeSignIn() {
+        sessionStore.setSignedIn(true)
+        appState = .signedIn(.home)
+    }
+
     /// Updates the high-level application state.
     func setAppState(_ state: AppState) {
         appState = state
@@ -124,9 +130,7 @@ final class ViewModel {
 
     func signOut() {
         clearProvisioningError()
-
-        let activationDataCache = try? activationDataCacheFactory.makeCache()
-        activationDataCache?.remove()
+        sessionStore.setSignedIn(false)
 
         provisioningService = nil
         hasLoadedInitialState = false

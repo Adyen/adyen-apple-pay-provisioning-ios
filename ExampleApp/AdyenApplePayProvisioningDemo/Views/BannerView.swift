@@ -21,11 +21,7 @@ struct BannerView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Image("tap-to-pay-apple")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 160)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            CardImageView()
 
             VStack(spacing: 8) {
                 Text("Make your payments a breeze!")
