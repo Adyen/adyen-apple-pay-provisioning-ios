@@ -25,7 +25,7 @@ class AdyenApplePayProvisioningDemoWalletNonUIExtension: PKIssuerProvisioningExt
             return ExtensionProvisioningService.entriesUnavailableExtensionStatus
         }
 
-        return provisioningService.extensionStatus(requiresAuthentication: true)
+        return provisioningService.extensionStatus(requiresAuthentication: !SessionStore().isSignedIn)
     }
 
     /// Retrieves available pass entries for the local iPhone wallet.

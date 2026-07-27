@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8680FA0E2F5F1AA00020CD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8680FA0D2F5F1AA00020CD9E /* LaunchScreen.storyboard */; };
+		8680FA102F5F1BB00020CD9E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680FA0F2F5F1BB00020CD9E /* SplashView.swift */; };
+		8680FA112F5F1BB00020CD9E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680FA0F2F5F1BB00020CD9E /* SplashView.swift */; };
 		863487A82F573ADD00FEE64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863487A52F573ADD00FEE64B /* Assets.xcassets */; };
 		863487A92F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487A42F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift */; };
 		863487AD2F587DC400FEE64B /* ActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487AC2F587DC400FEE64B /* ActivationData.swift */; };
@@ -22,6 +25,8 @@
 		863487CC2F597E9000FEE64B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C72F597E9000FEE64B /* ContentView.swift */; };
 		863487CD2F597E9000FEE64B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C32F597E9000FEE64B /* AccountView.swift */; };
 		863487CE2F597E9000FEE64B /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487C52F597E9000FEE64B /* BannerView.swift */; };
+		863487CF2F597E9200FEE64B /* MFAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D02F597E9100FEE64B /* MFAView.swift */; };
+		863487E12F597E9400FEE64B /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487E22F597E9300FEE64B /* CardImageView.swift */; };
 		863487D52F59808200FEE64B /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D02F59808200FEE64B /* MockProvider.swift */; };
 		863487D62F59808200FEE64B /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D32F59808200FEE64B /* URLSessionConfiguration+Mock.swift */; };
 		863487D72F59808200FEE64B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D12F59808200FEE64B /* MockURLProtocol.swift */; };
@@ -52,6 +57,12 @@
 		8680F9F92F5F078D0020CD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863487A52F573ADD00FEE64B /* Assets.xcassets */; };
 		8680F9FB2F5F0BB80020CD9E /* MockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FA2F5F0BB80020CD9E /* MockMode.swift */; };
 		8680F9FC2F5F0BB80020CD9E /* MockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FA2F5F0BB80020CD9E /* MockMode.swift */; };
+		8680FA002F5F0CC10020CD9E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FF2F5F0CC00020CD9E /* SessionStore.swift */; };
+		8680FA012F5F0CC10020CD9E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FF2F5F0CC00020CD9E /* SessionStore.swift */; };
+		8680FA052F5F0DD10020CD9E /* AuthFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680FA042F5F0DD00020CD9E /* AuthFlowView.swift */; };
+		8680FA062F5F0DD10020CD9E /* AuthFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680FA042F5F0DD00020CD9E /* AuthFlowView.swift */; };
+		8680FA072F5F0DD10020CD9E /* MFAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863487D02F597E9100FEE64B /* MFAView.swift */; };
+		8680FA082F5F0DD10020CD9E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680F9FF2F5F0CC00020CD9E /* SessionStore.swift */; };
 		869EC89F2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 869EC89E2F62E17E009F2BE9 /* AdyenApplePayExtensionProvisioning */; };
 		869EC8A12F62E17E009F2BE9 /* AdyenApplePayProvisioning in Frameworks */ = {isa = PBXBuildFile; productRef = 869EC8A02F62E17E009F2BE9 /* AdyenApplePayProvisioning */; };
 		86A05DB72F601D680016748C /* KeyedActivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A05DB62F601D680016748C /* KeyedActivationData.swift */; };
@@ -144,6 +155,8 @@
 		863487C62F597E9000FEE64B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		863487C72F597E9000FEE64B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		863487C82F597E9000FEE64B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		863487D02F597E9100FEE64B /* MFAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAView.swift; sourceTree = "<group>"; };
+		863487E22F597E9300FEE64B /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		863487D02F59808200FEE64B /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
 		863487D12F59808200FEE64B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		863487D22F59808200FEE64B /* MockURLProtocol+HandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockURLProtocol+HandleRequest.swift"; sourceTree = "<group>"; };
@@ -163,6 +176,8 @@
 		8680F9EE2F5B0F640020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdyenApplePayProvisioningDemoWalletUIExtension.entitlements; sourceTree = "<group>"; };
 		8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationDataCache.swift; sourceTree = "<group>"; };
 		8680F9FA2F5F0BB80020CD9E /* MockMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMode.swift; sourceTree = "<group>"; };
+		8680F9FF2F5F0CC00020CD9E /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		8680FA042F5F0DD00020CD9E /* AuthFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowView.swift; sourceTree = "<group>"; };
 		86A05DB62F601D680016748C /* KeyedActivationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedActivationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +221,10 @@
 			isa = PBXGroup;
 			children = (
 				863487DE2F598A2100FEE64B /* AdyenApplePayProvisioningDemo.entitlements */,
+				8680FA0C2F5F0EE00020CD9E /* Info.plist */,
+				8680FA0A2F5F0EE00020CD9E /* Secrets.xcconfig */,
+				8680FA0D2F5F1AA00020CD9E /* LaunchScreen.storyboard */,
+				8680FA0B2F5F0EE00020CD9E /* Demo-Config.xcconfig */,
 				863487A42F573ADD00FEE64B /* AdyenApplePayProvisioningDemoApp.swift */,
 				863487A52F573ADD00FEE64B /* Assets.xcassets */,
 				8680F9F42F5B17D40020CD9E /* Cache */,
@@ -263,7 +282,11 @@
 			children = (
 				863487C32F597E9000FEE64B /* AccountView.swift */,
 				863487C42F597E9000FEE64B /* AddPassButton.swift */,
+				8680FA042F5F0DD00020CD9E /* AuthFlowView.swift */,
+				8680FA0F2F5F1BB00020CD9E /* SplashView.swift */,
 				863487C52F597E9000FEE64B /* BannerView.swift */,
+				863487E22F597E9300FEE64B /* CardImageView.swift */,
+				863487D02F597E9100FEE64B /* MFAView.swift */,
 				863487C62F597E9000FEE64B /* CardView.swift */,
 				863487C72F597E9000FEE64B /* ContentView.swift */,
 				863487C82F597E9000FEE64B /* SignInView.swift */,
@@ -328,12 +351,18 @@
 			children = (
 				8680F9F52F5B18020020CD9E /* ActivationDataCache.swift */,
 				8680F9FA2F5F0BB80020CD9E /* MockMode.swift */,
+				8680F9FF2F5F0CC00020CD9E /* SessionStore.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+		8680FA0A2F5F0EE00020CD9E /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Secrets.xcconfig"; sourceTree = "<group>"; };
+		8680FA0D2F5F1AA00020CD9E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8680FA0F2F5F1BB00020CD9E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		8680FA0C2F5F0EE00020CD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8680FA0B2F5F0EE00020CD9E /* Demo-Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Demo-Config.xcconfig"; sourceTree = "<group>"; };
 /* Begin PBXNativeTarget section */
 		863487972F573AD000FEE64B /* AdyenApplePayProvisioningDemo */ = {
 			isa = PBXNativeTarget;
@@ -459,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8680F9F92F5F078D0020CD9E /* Assets.xcassets in Resources */,
+				8680FA0E2F5F1AA00020CD9E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,10 +518,15 @@
 				863487D62F59808200FEE64B /* URLSessionConfiguration+Mock.swift in Sources */,
 				86A05DB72F601D680016748C /* KeyedActivationData.swift in Sources */,
 				8680F9FB2F5F0BB80020CD9E /* MockMode.swift in Sources */,
+				8680FA002F5F0CC10020CD9E /* SessionStore.swift in Sources */,
+				8680FA052F5F0DD10020CD9E /* AuthFlowView.swift in Sources */,
+				8680FA102F5F1BB00020CD9E /* SplashView.swift in Sources */,
 				863487D72F59808200FEE64B /* MockURLProtocol.swift in Sources */,
 				863487DD2F59872700FEE64B /* ApiEnvironment.swift in Sources */,
 				863487D92F59808200FEE64B /* MockURLProtocol+HandleRequest.swift in Sources */,
 				863487CE2F597E9000FEE64B /* BannerView.swift in Sources */,
+				863487CF2F597E9200FEE64B /* MFAView.swift in Sources */,
+				863487E12F597E9400FEE64B /* CardImageView.swift in Sources */,
 				863487E92F59C8FE00FEE64B /* HeaderProvider.swift in Sources */,
 				863487BF2F58816C00FEE64B /* AppError.swift in Sources */,
 				863487B92F58803200FEE64B /* ViewModel+AppState.swift in Sources */,
@@ -518,6 +553,7 @@
 				8680F9E32F5B0D250020CD9E /* URLSessionConfiguration+Mock.swift in Sources */,
 				8680F9DB2F5B0CF40020CD9E /* ApiEnvironment.swift in Sources */,
 				8680F9FC2F5F0BB80020CD9E /* MockMode.swift in Sources */,
+				8680FA012F5F0CC10020CD9E /* SessionStore.swift in Sources */,
 				8680F9DE2F5B0D060020CD9E /* ProvisioningData.swift in Sources */,
 				8680F9D52F5B0C9E0020CD9E /* AdyenApplePayProvisioningDemoWalletNonUIExtension.swift in Sources */,
 				8680F9E12F5B0D1A0020CD9E /* MockURLProtocol.swift in Sources */,
@@ -531,6 +567,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8680F9E52F5B0D380020CD9E /* SignInView.swift in Sources */,
+				8680FA062F5F0DD10020CD9E /* AuthFlowView.swift in Sources */,
+				8680FA112F5F1BB00020CD9E /* SplashView.swift in Sources */,
+				8680FA072F5F0DD10020CD9E /* MFAView.swift in Sources */,
+				8680FA082F5F0DD10020CD9E /* SessionStore.swift in Sources */,
 				8680F9D62F5B0CA50020CD9E /* AdyenApplePayProvisioningDemoWalletUIExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +597,7 @@
 /* Begin XCBuildConfiguration section */
 		863487A12F573AD100FEE64B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8680FA0B2F5F0EE00020CD9E /* Demo-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -651,6 +692,7 @@
 		};
 		863487A32F573AD100FEE64B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8680FA0B2F5F0EE00020CD9E /* Demo-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

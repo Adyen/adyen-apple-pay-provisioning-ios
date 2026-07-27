@@ -18,8 +18,12 @@ struct ContentView: View {
             switch viewModel.appState {
             case .signedOut:
                 SignInView { _ in
-                    // Authentication succeeded. The signed-in flow decides when to fetch data.
-                    viewModel.setAppState(.signedIn(.home))
+                    viewModel.setAppState(.mfa)
+                }
+
+            case .mfa:
+                MFAView {
+                    viewModel.completeSignIn()
                 }
 
             case .loading:
@@ -31,6 +35,7 @@ struct ContentView: View {
                     BannerView { action in
                         handleBannerAction(action)
                     }
+                    .ignoresSafeArea(.keyboard)
                     .alert(item: Bindable(viewModel).provisioningError) { error in
                         Alert(
                             title: Text("Wallet Error"),
@@ -43,6 +48,7 @@ struct ContentView: View {
 
                 case .home:
                     mainTabView(viewModel)
+                        .ignoresSafeArea(.keyboard)
                         .task {
                             await viewModel.fetchStateIfNeeded()
                         }

@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MTrac7+FP8eXJZXRZQOadEGm7yI=
+		w6VmqFKiNOs3za3wEMvvzrSMN58=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Qhj+VyiVOPhZvBPVYgPDi7eojcU=
+		Ia3H87SLxaM/OTDWDZ4xMG2hD9U=
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Fk6JmGk60IT0lAPaJaIj0KiVe3U=
+		KQz8bhRotimnqZmMMgYdy/jTRjE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nK3rbRHlo3VDT6KP9PSmzQmyP5gjbYtYil0MsFX5w9c=
+			zyedh3i59e3WIP0AZmZTL7LRWlFhfqUbxH/VOylc3y0=
 			</data>
 		</dict>
 		<key>Modules/AdyenApplePayProvisioning.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vdzC1QUd9b9NNegt10g3daY2XuYFdU7c9hDlgv9ZFV0=
+			zO7ojpzyWqTGTIxyr+I4jHK0+XKBHBiwQcWmAtpllyc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

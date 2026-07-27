@@ -12,6 +12,7 @@ extension ViewModel {
     /// Represents the high-level state of the provisioning application.
     enum AppState: Equatable {
         case signedOut
+        case mfa
         case loading
         case signedIn(SignedInState)
     }
